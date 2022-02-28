@@ -1,0 +1,38 @@
+@import '../../../styles.scss';
+div.daftar-pesanan-content.container {
+    margin-top: 10px;
+    background-color: wheat;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.vertical-line {
+    width: 1px;
+    height: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: $textLight;
+}
+
+div.daftar-pesanan-content-detail-img img {
+    width: 100px;
+    height: 100px;
+}
+
+@media only screen and (max-width:600px) {
+    div.nominal-tagihan{
+        display: none;
+    }
+    div.detail-description-price{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1028px){
+    div.nominal-tagihan{
+        display: none;
+    }
+    div.detail-description-price{
+        display: none;
+    }
+}

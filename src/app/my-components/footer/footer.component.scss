@@ -1,0 +1,58 @@
+@import '../../../styles.scss';
+section.sticky-footer {
+    position: static;
+    margin-top: 100px;
+    bottom: 0;
+    background-color: $textWhite;
+    min-height: 200px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+ul.unstyled-list {
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul.unstyled-list li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: $textBlack;
+}
+
+ul.unstyled-list li.unstyled-list-item {
+    padding-bottom: 10px;
+}
+
+.mat-icon.phone-icon {
+    font-size: 15px;
+    color: $textWhite;
+    background-color: aqua;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.mat-icon.mail-icon {
+    font-size: 15px;
+    color: $textWhite;
+    background-color: $redColor;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+button.btn-butuh-bantuan {
+    background-color: $redColor;
+    color: $textWhite;
+    font-size: 12px;
+    padding-left: 35px;
+    padding-right: 35px;
+}

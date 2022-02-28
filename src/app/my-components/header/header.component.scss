@@ -1,0 +1,122 @@
+@import '../../../styles.scss';
+section.fixed-header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+div.search-box {
+    height: 40px;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+}
+
+button.btn-with-outline {
+    border: 2px solid white !important;
+}
+
+input[type=text].search-input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+input[type=text].search-input::placeholder {
+    font-size: .8125rem !important;
+}
+
+div.user-image {
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+div.user-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modal-dialog {
+    height: 100%
+}
+
+.modal-content {
+    height: 90%
+}
+
+.modal-body {
+    height: 100%;
+    overflow: hidden
+}
+
+@media only screen and(max-width:600px) {
+    section.fixed-header {
+        display: none;
+    }
+    section.mobile-navigation {
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        top: 0;
+        height: 70px;
+    }
+    button.shopping_cart-icon {
+        position: absolute;
+    }
+    div.shopping_cart_count {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $redColor;
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        right: 3;
+        font-size: 10px;
+        vertical-align: text-top;
+    }
+    div.navigation-category .mat-icon {
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and(min-width:768px) and (max-width:1024px) {
+    section.fixed-header {
+        display: none;
+    }
+    section.mobile-navigation {
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        top: 0;
+        height: 70px;
+    }
+    button.shopping_cart-icon {
+        position: absolute;
+    }
+    div.shopping_cart_count {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $redColor;
+        position: relative;
+        z-index: 1;
+        top: -10px;
+        left: -10px;
+        font-size: 10px;
+        vertical-align: text-top;
+    }
+    div.navigation-category .mat-icon {
+        font-size: 18px !important;
+    }
+}

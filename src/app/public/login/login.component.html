@@ -1,0 +1,80 @@
+<section class="login">
+    <div class="container-fluid">
+        <div class="row form-login-card shadow">
+            <div class="col-md-8 img-wrapper p-0">
+                <img src="../../../assets/images/login-image.PNG" alt="" />
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-center mt-5 mb-5 large-font-size medium-font-weight">
+                    LOGIN
+                </h5>
+                <form>
+                    <div class="login-form-input px-2 d-flex justify-content-center">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Masukkan Email</mat-label>
+                            <input type="email" matInput name="email" id="email" formControlName="primaryEmail" />
+                            <mat-icon matSuffix>email</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="py-1"></div>
+                    <div class="login-form-input px-2 d-flex justify-content-center mt-3">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Masukkan Password</mat-label>
+                            <input type="password" matInput name="password" id="password" />
+                            <mat-icon matSuffix>lock</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="d-flex justify-content-end px-2 py-3">
+                        <h5 class="medium-gray-text">Lupa Password</h5>
+                    </div>
+                    <div class="login-form-input px-2 d-flex justify-content-center">
+                        <button type="button" [routerLink]="['/beranda']" mat-raised-button class="primary-button full-width border-radius-small background-primary text-white">
+              Masuk
+            </button>
+                    </div>
+                </form>
+                <div class="mb-4"></div>
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <div class="divider"></div>
+                    <h5 class="medium-gray-text mx-3 align-content-center mt-2">Atau</h5>
+                    <div class="divider"></div>
+                    <div></div>
+                </div>
+                <div class="mb-4"></div>
+                <div class="d-flex justify-content-around px-2">
+                    <button mat-raised-button class="facebook-button">Facebook</button>
+                    <button mat-raised-button class="google-button ml-2">
+            <div
+              class="d-flex justify-content-center align-content-center align-items-center"
+            >
+              <img
+                src="../../../assets/images/icon_login_with_google.jpg"
+                style="width: 25px"
+                alt=""
+              />
+              <span class="medium-gray-text ml-2">Google</span>
+            </div>
+          </button>
+                    <button mat-raised-button class="apple-button ml-2">
+            <div
+              class="d-flex justify-content-center align-content-center align-items-center"
+            >
+              <img
+                src="../../../assets/images/icon_login_with_apple.png"
+                style="width: 30px"
+                alt=""
+              />
+              <span class="medium-gray-text ml-2">Apple</span>
+            </div>
+          </button>
+                </div>
+                <div class="d-flex justify-content-center px-2 mt-4">
+                    <h5 class="medium-gray-text">Belum punya Akun?</h5>
+                    <div [routerLink]="['/register']" class="green-text decoration-none cursor-pointer">
+                        Daftar di sini
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

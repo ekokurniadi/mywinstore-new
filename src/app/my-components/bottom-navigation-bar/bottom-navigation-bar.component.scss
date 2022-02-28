@@ -1,0 +1,43 @@
+@import '../../../styles.scss';
+section.footer-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: block;
+}
+
+div.menu-items-content {
+    width: calc(20%);
+    margin-top: 10px;
+    padding: 4px 0px;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    font-weight: 400;
+    font-size: .8125rem;
+    line-height: 16px;
+    color: rgba(49, 53, 59, 0.68);
+    text-decoration: initial;
+    white-space: nowrap;
+}
+
+div.menu-items-content div.svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+    position: relative;
+    border: none !important;
+}
+
+div.menu-items-content span.active {
+    font-weight: 600;
+}
+
+@media only screen and(min-width:1024px) {
+    section.footer-mobile {
+        display: none;
+    }
+}

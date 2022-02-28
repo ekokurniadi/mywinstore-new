@@ -1,0 +1,297 @@
+@import '../../../styles.scss';
+section.detail-product div.container {
+    margin-top: 50px;
+    background-color: $textWhite;
+}
+
+.mat-icon {
+    margin-top: 15px;
+}
+
+div.head {
+    border-bottom: 2px solid $g_light;
+}
+
+div.product-cover-image {
+    width: 100%;
+    height: 400px;
+}
+
+div.product-cover-image img {
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+}
+
+div.product-detail-count-content button {
+    background-color: $g_light;
+    color: $textWhite;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+div.product-detail-image {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+div.product-detail-image-content {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid $textLight;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.product-detail-image-content img {
+    width: 120px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid $textLight;
+}
+
+div.product-detail-image-caption {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.product-detail-image-caption .mat-icon {
+    color: $p_dark;
+    margin-right: -10px;
+    margin-bottom: -5px !important;
+    align-self: center;
+}
+
+div.product-detail-image-caption div {
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+div.product-detail-price span.price {
+    color: $p_dark;
+}
+
+div.product-detail-color span.color-option {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+}
+
+div.product-detail-color div.color-option-items {
+    background-color: $p_dark;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+}
+
+div.caption-items {
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+div.product-detail-kirim {
+    white-space: normal;
+}
+
+div.product-detail-kirim a {
+    text-decoration: none;
+}
+
+div.product-detail-size span.size-option div.size-option-items.active {
+    border: 1px solid $textBlack;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 25px;
+    margin-left: -3px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 2px;
+}
+
+div.product-detail-count-content button.btn-count-decrease {
+    height: 30px;
+    width: 30px !important;
+    border-radius: 6px 0px 0px 6px !important;
+    color: $textBlack;
+}
+
+div.product-detail-count-content button.btn-count-increase {
+    height: 30px;
+    width: 30px !important;
+    border-radius: 0px 6px 6px 0px !important;
+    color: $textBlack;
+}
+
+.set-width {
+    text-align: center;
+    width: 60px;
+    height: 30px !important;
+    border: 1px solid $textLight;
+}
+
+button.btn-twitter {
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50% !important;
+    padding: 0;
+    border: none;
+}
+
+button.btn-twitter img {
+    width: 100% !important;
+    height: auto;
+    object-fit: cover;
+}
+
+button.btn-mail {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    border: none;
+    background-color: transparent;
+}
+
+button.btn-mail img {
+    width: 100% !important;
+    height: auto;
+    object-fit: cover;
+}
+
+button.btn-facebook {
+    border-radius: 50% !important;
+    width: 25px !important;
+    height: 25px !important;
+    background-color: $blueColor;
+    border: none;
+}
+
+div.profile-toko-card.card {
+    padding: 15px;
+}
+
+div.profile-toko-action button {
+    border-radius: 0px !important;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+div.note {
+    width: 100%;
+    height: auto;
+    position: relative;
+    white-space: normal;
+    padding-top: 50%;
+}
+
+div.profile-toko-detail span.rating .mat-icon {
+    margin-top: 2px;
+}
+
+div.product-detail-wishlist-share button img {
+    border-radius: 50% !important;
+    width: 100% !important;
+    height: auto;
+    object-fit: contain;
+}
+
+a.btn-add-wishlist .mat-icon {
+    color: $textLight;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+a.btn-add-wishlist {
+    background-color: transparent;
+    box-shadow: 0 !important;
+    color: $textBlack;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+div.product-detail-actions button.btn-add-cart {
+    background-color: $blueColor;
+    color: white;
+    margin-right: 15px;
+    width: 100%;
+    height: 40px;
+}
+
+div.product-detail-actions button.btn-buy-now {
+    background-color: $redColor;
+    color: white;
+    width: 100%;
+    height: 40px;
+}
+
+div.product-detail-actions .mat-icon {
+    margin-top: 8px;
+}
+
+section.spesifikasi-diskusi-ulasan div.container {
+    margin-top: 15px;
+    background-color: $textWhite;
+}
+
+div.header-with-border {
+    border: 2px solid $g_light;
+}
+
+.detail-description h5 {
+    text-align: end;
+}
+
+div.profile-circle img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media only screen and(max-width:768px) {
+    section.detail-product div.container {
+        margin-top: 50px;
+    }
+    div.product-detail-image-caption p {
+        white-space: nowrap;
+    }
+    div.product-detail-actions {
+        display: block !important;
+        text-align: center;
+    }
+    div.product-detail-actions button.btn-add-cart {
+        background-color: $blueColor;
+        color: white;
+        width: 100%;
+        height: 40px;
+        margin-right: 0px !important;
+        margin-bottom: 15px;
+    }
+    div.product-detail-actions button.btn-buy-now {
+        background-color: $redColor;
+        color: white;
+        width: 100%;
+        height: 40px;
+    }
+}

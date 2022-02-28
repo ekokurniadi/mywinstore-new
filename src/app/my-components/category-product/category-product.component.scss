@@ -1,0 +1,30 @@
+@import '../../../styles.scss';
+section.category-product div.container {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+div.category-wrapper img {
+    width: 68%;
+    object-fit: contain;
+}
+
+div.category-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid $g_light;
+}
+
+div.category-items p {
+    max-width: 106px !important;
+    width: 106px !important;
+    line-height: 14px;
+    white-space: normal;
+    margin-top: 5px;
+}
+
+div.category-parent {
+    overflow-x: auto;
+}

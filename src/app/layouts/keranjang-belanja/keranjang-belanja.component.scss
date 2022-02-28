@@ -1,0 +1,159 @@
+@import '../../../styles.scss';
+div.header-column{
+    min-width: calc(100%/3.5);
+   
+    text-align: center;
+}
+
+div.header-column-small{
+    width: 100%;
+    text-align: center;
+}
+
+hr.line{
+    width: 100%;
+    border: 1px solid $g_light;
+}
+
+div.keranjang-belanja-checkbox-image img{
+    width: 188px;
+}
+
+div.keranjang-belanja-wrapper{
+    display: inline-flex !important;
+}
+
+h5.items-brand{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 350px;
+}
+div.harga{
+  position: relative;
+}
+
+div.keranjang-belanja-description{
+    display: flex;
+}
+
+div.header-column.harga-satuan{
+    position:absolute;
+    left: 17px;
+    white-space: nowrap;
+    width: 154.283px;
+}
+
+div.header-column.kuantitas{
+    position:absolute;
+    left: 173px;
+    top: -5px;
+    white-space: nowrap;
+    width: 154.283px;
+}
+div.header-column.total-harga{
+    position:absolute;
+    left: 330px;
+    white-space: nowrap;
+    width: 154.283px;
+}
+div.header-column-small.aksi{
+    position:absolute;
+    left: 480px;
+    white-space: nowrap;
+    width: 77.1501px;
+}
+
+div.product-detail-count-content button {
+    background-color: $g_light;
+    color: $textWhite;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+div.product-detail-count-content button.btn-count-decrease {
+    height: 30px;
+    width: 30px !important;
+    border-radius: 6px 0px 0px 6px !important;
+    color: $textBlack;
+}
+
+div.product-detail-count-content button.btn-count-increase {
+    height: 30px;
+    width: 30px !important;
+    border-radius: 0px 6px 6px 0px !important;
+    color: $textBlack;
+}
+
+.set-width {
+    text-align: center;
+    width: 60px;
+    height: 30px !important;
+    border: 1px solid $textLight;
+}
+
+
+@media only screen and(max-width:600px) {
+
+    div.keranjang-belanja-wrapper{
+        min-height: 100%;
+        padding-bottom: 20%;
+    }
+    section.keranjang-belanja{
+        display: none;
+    }
+    
+    div.keranjang-belanja-checkbox-image img{
+        width: 94px;
+    }
+
+   
+    h5.items-brand{
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 300px;
+    }
+
+    div.keranjang-belanja-description{
+        display: flex;
+        align-items: flex-start;
+    }
+    div.keranjang-belanja-description h5.items-brand{
+        margin-top: -30px;
+    }
+    div.harga{
+        position:absolute;
+        display: block !important;
+    }
+    
+
+    div.header-column.harga-satuan{
+        position:absolute;
+        left: -35px;
+        top: 0px;
+        white-space: nowrap;
+    }
+
+    div.header-column.kuantitas{
+        position:absolute;
+        left: -25px;
+        top: 35px;
+        white-space: nowrap;
+    
+    }
+    div.header-column.total-harga{
+        position:absolute;
+        left: -25px;
+        top:80px;
+        white-space: nowrap;
+    
+    }
+    div.header-column-small.aksi{
+        display: none;
+    }   
+    
+}

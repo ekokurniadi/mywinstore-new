@@ -1,1 +1,223 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$mywinstore-primary: mat.define-palette(mat.$indigo-palette);
+$mywinstore-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$mywinstore-warn: mat.define-palette(mat.$red-palette);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$mywinstore-theme: mat.define-light-theme(( color: ( primary: $mywinstore-primary, accent: $mywinstore-accent, warn: $mywinstore-warn, )));
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($mywinstore-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+$redColor: #FF4051;
+$blueColor: #1877F2;
+$greenColor: #10CD28;
+$fontFamily: 'Montserrat',
+sans-serif;
+//Primary
+$primary: #0080ff;
+$p_light: #69afff;
+$p_dark: #0055cb;
+//Secondary
+$secondary: #3ebffc;
+$s_light: #80f2ff;
+$s_dark: #008fc9;
+//gray
+$g_light:#ECECEC;
+$g_medium:#f9fafc;
+$g_dark:rgba(184, 180, 184, 0.933);
+//Text
+$textBlack: #000000;
+$textLight: rgba(49, 53, 59, 0.44);
+$textWhite: #ffffff;
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: $g_medium !important;
+}
+
+// font style
+.strip-text-style {
+    text-decoration: line-through;
+}
+
+.elipsis-text-style {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+// font-size
+.small-font-size {
+    font-size: .75rem !important;
+}
+
+.normal-font-size {
+    font-size: .8125rem !important;
+}
+
+.medium-font-size {
+    font-size: .875rem !important;
+}
+
+.large-font-size {
+    font-size: 1rem !important;
+}
+
+.extra-large-font-size {
+    font-size: 1.125rem !important;
+}
+
+// font-weight
+.normal-font-weight {
+    font-weight: 300 !important;
+}
+
+.medium-font-weight {
+    font-weight: 500 !important;
+}
+
+.semi-bold-font-weight {
+    font-weight: 600 !important;
+    
+}
+
+.bold-font-weight {
+    font-weight: 700 !important;
+}
+
+// no decoration text
+.decoration-none {
+    text-decoration: none !important;
+}
+
+// cursor pointer
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+// text-color
+.black-text {
+    color: $textBlack !important;
+}
+
+.light-text {
+    color: $textLight !important;
+}
+
+.white-text {
+    color: $textWhite !important;
+}
+
+.green-text {
+    color: $greenColor !important;
+}
+
+.gray-text {
+    color: $g_dark !important;
+}
+
+.primary-text {
+    color: $p_dark !important;
+}
+
+// background-color
+.background-white {
+    background-color: $textWhite !important;
+}
+
+.background-black {
+    background-color: $textBlack !important;
+}
+
+.background-pink {
+    background-color: $redColor !important;
+}
+
+.background-gray {
+    background-color: $g_dark !important;
+}
+
+.background-primary {
+    background-color: $p_dark !important;
+}
+
+.background-transparent {
+    background-color: transparent !important;
+}
+
+// border-radius
+.border-radius-none {
+    border-radius: 0 !important;
+}
+
+.border-radius-reguler {
+    border-radius: 15px !important;
+}
+
+.border-radius-small {
+    border-radius: 10px !important;
+}
+
+.border-small-bottom-right {
+    border-bottom-right-radius: 10px !important;
+}
+
+.border-small-bottom-left {
+    border-bottom-left-radius: 10px !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+// shadow
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+main {
+    margin-top: 50px;
+    min-height: 50%;
+}
+
+@media only screen and(max-width: 1028px) {
+    main {
+        margin-top: 65px;
+    }
+}
+
+.relative {
+    position: relative !important;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+button {
+    outline: none;
+}

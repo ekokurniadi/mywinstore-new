@@ -1,0 +1,35 @@
+<section class="mt-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-lg-2" [routerLink]="['/detail-product']" *ngFor="let p of products">
+                <div class="card-product shadow">
+                    <div class="card-product-image">
+                        <img src="../../../assets/images/product/sample-product-5.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-product-brand">
+                            <h5 class="normal-font-size normal-font-weight black-text">LG pen stylus 4/64GB FHD+...Camera 64MP</h5>
+                        </div>
+                        <div class="card-product-price large-font-size semi-bold-font-weight">
+                            Rp2.999.999
+                        </div>
+                        <div class="card-product-discount small-font-size medium-font-weight strip-text-style gray-text">
+                            Rp4.500.000
+                        </div>
+                        <div class="card-product-location">
+                            <mat-icon matSuffix class="gray-text">location_on</mat-icon>
+                            Jambi
+                        </div>
+                        <div class="product-sales-count d-flex justify-content-between mr-2 semi-bold-font-weight normal-font-size">
+                            <div class="product-rating d-flex justify-content-start">
+                                <mat-icon matSuffix>star</mat-icon>
+                                4.9
+                            </div>
+                            Terjual 9
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
