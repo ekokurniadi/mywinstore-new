@@ -2,9 +2,10 @@
     <section class="header-intro background-primary">
         <div class="container">
             <div class="row d-flex justify-content-end">
-                <button class="background-transparent border-none white-text d-flex cursor-pointer align-items-center align-content-center">
-                  <mat-icon class="medium-font-size d-flex align-items-center" matSuffix>help_outline</mat-icon>
-                  <span class="normal-font-size mr-2 d-flex align-items-center">Bantuan</span>
+                <button
+                    class="background-transparent border-none white-text d-flex cursor-pointer align-items-center align-content-center">
+                    <mat-icon class="medium-font-size d-flex align-items-center" matSuffix>help_outline</mat-icon>
+                    <span class="normal-font-size mr-2 d-flex align-items-center">Bantuan</span>
                 </button>
             </div>
         </div>
@@ -14,67 +15,77 @@
             <div class="row">
                 <div class="col-md-12 d-flex relative">
                     <div class="navigation-logo d-flex mt-2">
-                        <div [routerLink]="['/beranda']" class="cursor-pointer large-font-size white-text bold-font-weight mr-3">
+                        <div [routerLink]="['/beranda']"
+                            class="cursor-pointer large-font-size white-text bold-font-weight mr-3">
                             MYWINSTORE
                         </div>
                     </div>
                     <div class="navigation-category mr-3 mt-1">
                         <div class="navigation-category-items">
-                            <button [matMenuTriggerFor]="kategori" class="background-transparent border-none d-flex justify-content-start align-items-center cursor-pointer">
-                            <mat-icon class="large-font-size white-text  d-flex align-items-center" matSuffix>redeem</mat-icon>
-                            <span class="white-text normal-font-weight">Kategori</span>
-                          </button>
+                            <button [matMenuTriggerFor]="kategori"
+                                class="background-transparent border-none d-flex justify-content-start align-items-center cursor-pointer">
+                                <mat-icon class="large-font-size white-text  d-flex align-items-center" matSuffix>redeem
+                                </mat-icon>
+                                <span class="white-text normal-font-weight">Kategori</span>
+                            </button>
                             <mat-menu #kategori="matMenu">
                                 <button mat-menu-item>
-                                <span>Pakaian</span>
-                              </button>
+                                    <span>Pakaian</span>
+                                </button>
                                 <button mat-menu-item>
-                                <span>Elektronik</span>
-                              </button>
+                                    <span>Elektronik</span>
+                                </button>
                                 <button mat-menu-item>
-                                <span>Lifestyle</span>
-                              </button>
+                                    <span>Lifestyle</span>
+                                </button>
                                 <button mat-menu-item>
-                                <span>Makanan</span>
-                              </button>
+                                    <span>Makanan</span>
+                                </button>
                                 <button mat-menu-item>
-                                <span>Kesehatan</span>
-                              </button>
+                                    <span>Kesehatan</span>
+                                </button>
                                 <button mat-menu-item>
-                                <span>Otomotif</span>
-                              </button>
+                                    <span>Otomotif</span>
+                                </button>
                             </mat-menu>
                         </div>
                     </div>
-                    <div class="search-box background-white border-radius-small full-width mr-2 d-flex align-items-center">
+                    <div
+                        class="search-box background-white border-radius-small full-width mr-2 d-flex align-items-center">
                         <mat-icon matSuffix class="search-suffix-icon light-text ml-1">search</mat-icon>
                         <input type="text" class="search-input full-width" placeholder="Kamu lagi cari apa?">
-                        <button mat-raised-button class="search-button cursor-pointer white-text background-primary mr-1 ml-1">Cari</button>
+                        <button mat-raised-button
+                            class="search-button cursor-pointer white-text background-primary mr-1 ml-1">Cari</button>
                     </div>
 
                     <div class="mt-1">
                         <button class="background-transparent border-none white-text d-flex cursor-pointer">
-                          <mat-icon class="large-font-size d-flex align-items-center" matSuffix>notifications_none</mat-icon>
+                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>notifications_none
+                            </mat-icon>
                         </button>
                     </div>
                     <div class="mt-1">
-                        <button [routerLink]="['keranjang-belanja']" class="background-transparent border-none white-text d-flex cursor-pointer">
-                          <mat-icon class="large-font-size d-flex align-items-center" matSuffix>shopping_cart</mat-icon>
+                        <button [routerLink]="['keranjang-belanja']"
+                            class="background-transparent border-none white-text d-flex cursor-pointer">
+                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>shopping_cart
+                            </mat-icon>
                         </button>
                     </div>
                     <div>
-                        <button class="btn-with-outline background-primary white-text no-shadow border-radius-small cursor-pointer" mat-raised-button>Masuk</button>
+                        <button
+                            class="btn-with-outline background-primary white-text no-shadow border-radius-small cursor-pointer"
+                            mat-raised-button>Masuk</button>
                     </div>
                     <span class="d-flex cursor-pointer" [routerLink]="['user']">
-                    <div class="user-image">
-                        <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
-                    </div>
-                    <div class="d-flex align-items-center ml-2">
-                        <span class="white-text normal-font-size normal-font-weight">McQueen</span>
+                        <div class="user-image">
+                            <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
+                        </div>
+                        <div class="d-flex align-items-center ml-2">
+                            <span class="white-text normal-font-size normal-font-weight">McQueen</span>
+                        </div>
+                    </span>
                 </div>
-                </span>
             </div>
-        </div>
         </div>
     </section>
 </section>
@@ -86,31 +97,41 @@
             <div class="col-md-12 align-items-center full-width mr-2">
                 <div class="navigation-category mt-1 d-flex align-items-center align-content-center mt-3">
                     <div class="navigation-logo full-width d-flex mt-2">
-                        <div [routerLink]="['/beranda']" class="logo cursor-pointer large-font-size white-text bold-font-weight mr-3">
+                        <div [routerLink]="['/beranda']"
+                            class="logo cursor-pointer large-font-size white-text bold-font-weight mr-3">
                             MYWINSTORE
                         </div>
                     </div>
 
                     <div class="mt-1">
-                        <button (click)="openModal();" class="background-transparent border-none white-text cursor-pointer d-flex">
-                      <mat-icon class="large-font-size d-flex align-items-center" matSuffix>search</mat-icon>
-                    </button>
+                        <button (click)="openModal();"
+                            class="background-transparent border-none white-text cursor-pointer d-flex">
+                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>search</mat-icon>
+                        </button>
 
                     </div>
                     <div class="mt-1">
                         <button class="background-transparent border-none white-text cursor-pointer d-flex relative">
-                        <mat-icon class="large-font-size d-flex align-items-center" matSuffix>notifications_none</mat-icon>
-                        <div class="shopping_cart_count d-flex justify-content-center align-items-center justify-items-center">15</div>
-                      </button>
+                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>notifications_none
+                            </mat-icon>
+                            <div
+                                class="shopping_cart_count d-flex justify-content-center align-items-center justify-items-center">
+                                15</div>
+                        </button>
                     </div>
                     <div class="mt-1">
-                        <button [routerLink]="['keranjang-belanja']" class="background-transparent border-none white-text cursor-pointer d-flex relative">
-                        <mat-icon class="large-font-size d-flex align-items-center" matSuffix>shopping_cart</mat-icon>
-                        <div class="shopping_cart_count d-flex justify-content-center align-items-center justify-items-center">15</div>
-                      </button>
+                        <button [routerLink]="['keranjang-belanja']"
+                            class="background-transparent border-none white-text cursor-pointer d-flex relative">
+                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>shopping_cart
+                            </mat-icon>
+                            <div
+                                class="shopping_cart_count d-flex justify-content-center align-items-center justify-items-center">
+                                15</div>
+                        </button>
                     </div>
                     <div class="mt-1 ml-2">
-                        <button class="btn-with-outline background-primary white-text no-shadow border-radius-small" mat-raised-button>Masuk</button>
+                        <button class="btn-with-outline background-primary white-text no-shadow border-radius-small"
+                            mat-raised-button>Masuk</button>
                     </div>
                     <!-- <div class="user-image">
                         <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
@@ -126,17 +147,20 @@
 </section>
 
 <!-- Modal -->
-<div class="modal fade" id="modalPencarian" tabindex="-1" role="dialog" aria-labelledby="modalPencarianLabel" aria-hidden="true">
+<div class="modal fade" id="modalPencarian" tabindex="-1" role="dialog" aria-labelledby="modalPencarianLabel"
+    aria-hidden="true">
     <div class="modal-dialog relative" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="cursor-pointer" mat-raised-button (click)="closeModal()" style="position: absolute;width: 20px;height: 20px;right: 0px; top:2px;z-index: 999;">
+                <div class="cursor-pointer" mat-raised-button (click)="closeModal()"
+                    style="position: absolute;width: 20px;height: 20px;right: 0px; top:2px;z-index: 999;">
                     <mat-icon class="large-font-size">close</mat-icon>
                 </div>
                 <div class="search-box background-white border-radius-small full-width d-flex align-items-center">
                     <mat-icon matSuffix class="search-suffix-icon light-text ml-1">search</mat-icon>
                     <input type="text" class="search-input full-width" placeholder="Kamu lagi cari apa?">
-                    <button (click)="closeModal()" mat-raised-button class="search-button white-text background-primary border-radius-small mr-1 ml-1">Cari</button>
+                    <button (click)="closeModal()" mat-raised-button
+                        class="search-button white-text background-primary border-radius-small mr-1 ml-1">Cari</button>
                 </div>
             </div>
         </div>
