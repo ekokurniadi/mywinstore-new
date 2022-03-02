@@ -10,6 +10,9 @@ import { CategoryProductComponent } from './category-product/category-product.co
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { DaftarPesananContentComponent } from './daftar-pesanan-content/daftar-pesanan-content.component';
+import { ModalVoucherComponent } from './modal-voucher/modal-voucher.component';
+import { CardVoucherComponent } from './card-voucher/card-voucher.component';
+import { KeranjangBelanjaCardComponent } from './keranjang-belanja-card/keranjang-belanja-card.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { DaftarPesananContentComponent } from './daftar-pesanan-content/daftar-p
     BottomNavigationBarComponent,
     CategoryProductComponent,
     DaftarPesananContentComponent,
+    ModalVoucherComponent,
+    CardVoucherComponent,
+    KeranjangBelanjaCardComponent,
   ],
   imports: [CommonModule, SharedModule, RouterModule],
   exports: [
@@ -31,7 +37,10 @@ import { DaftarPesananContentComponent } from './daftar-pesanan-content/daftar-p
     ProductRekomendasiComponent,
     BottomNavigationBarComponent,
     CategoryProductComponent,
-    DaftarPesananContentComponent
+    DaftarPesananContentComponent,
+    ModalVoucherComponent,
+    CardVoucherComponent,
+    KeranjangBelanjaCardComponent
   ],
 })
 export class MyComponentsModule {}

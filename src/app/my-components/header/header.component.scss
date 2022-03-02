@@ -13,6 +13,16 @@ div.search-box {
     padding-top: 20px !important;
 }
 
+button.search-button{
+    height: 30px !important;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    margin-right: 5px !important;
+}
+
 button.btn-with-outline {
     border: 2px solid white !important;
 }

@@ -1,0 +1,94 @@
+@import '../../../styles.scss';
+div.category-card {
+    padding-right: 0 !important;
+}
+
+div.sort-by-price {
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $textLight;
+    
+}
+
+div.sort-by-price .mat-select::placeholder {
+    color: red !important;
+}
+
+.input-checkbox[type="checkbox"] {
+    border: none;
+    content: "";
+    background: #FFF;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    // margin-top: 0px;
+}
+
+
+.input-checkbox2[type="checkbox"] {
+    border: none;
+    content: "";
+    background: #FFF;
+    width: 20px;
+    height: 20px;
+    // margin-top: -10px;
+    margin-right: 10px;
+}
+
+.category-items-menu .mat-icon {
+    font-size: 14px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+
+div.checklist-filter-items .mat-icon {
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+div.category-card div.card {
+    
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and(min-width:768px) and(max-width:1024px) {
+    div.category-card {
+      display: none;
+    }
+    div.checklist-filter{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    div.input-filter-price{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and(max-width:600px) {
+    div.category-card {
+        display: none;
+      }
+      div.checklist-filter{
+          overflow: hidden;
+          overflow-x: scroll;
+          white-space: nowrap;
+      }
+      div.input-filter-price{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+
+    mat-form-field.mat-form-field {
+       width: 120px;
+       border: none;
+    }
+}

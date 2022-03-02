@@ -1,0 +1,72 @@
+@import "../../../styles.scss";
+.input-check[type="checkbox"] {
+  border: none;
+  content: "";
+  background: #fff;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 10px;
+}
+
+hr.line {
+  border: 1px solid $g_light !important;
+  width: 100%;
+}
+
+div.image img {
+  width: 188px;
+  object-fit: cover;
+}
+
+div.image {
+  width: 188px;
+  height: auto;
+}
+
+div.keranjang-image {
+  display: flex;
+  align-items: flex-start;
+}
+
+div.product-detail-count-content button.btn-count-decrease {
+  height: 30px;
+  width: 30px !important;
+  border-radius: 6px 0px 0px 6px !important;
+  color: $textBlack;
+}
+
+div.product-detail-count-content button.btn-count-increase {
+  height: 30px;
+  width: 30px !important;
+  border-radius: 0px 6px 6px 0px !important;
+  color: $textBlack;
+}
+
+.set-width {
+  text-align: center;
+  width: 60px;
+  height: 30px !important;
+  border: 1px solid $textLight;
+}
+
+div.mobile-display {
+  display: none;
+}
+
+@media only screen and(max-width:600px) {
+  div.mobile-display-col {
+    display: none;
+  }
+  div.mobile-display {
+    display: block;
+  }
+}
+
+@media only screen and(min-width:768px) and (max-width: 1028px) {
+  div.mobile-display-col {
+    display: none;
+  }
+  div.mobile-display {
+    display: block;
+  }
+}

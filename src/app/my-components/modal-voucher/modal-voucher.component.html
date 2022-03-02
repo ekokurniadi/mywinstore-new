@@ -1,0 +1,70 @@
+
+<!-- Modal -->
+<div class="modal fade" id="modalVoucher" tabindex="-1" role="dialog" aria-labelledby="modalVoucherLabel" aria-hidden="true">
+    <div class="modal-dialog voucher relative" role="document">
+        <div class="modal-content voucher">
+            <div class="modal-header">
+                <div class="cursor-pointer" mat-raised-button (click)="closeModalVoucher()" style="position: absolute;width: 20px;height: 20px;right: 0px; top:2px;z-index: 999;">
+                    <mat-icon class="large-font-size">close</mat-icon>
+                </div>
+                <div class="container">
+                    <div class="row fixed-header">
+                        <div class="col-md-12 mt-3">
+                            <h5 class="medium-font-size semi-bold-font-weight">Pilih Voucher Promo</h5>
+                        </div>
+                        <div class="col-md-12 border-radius-small background-white mt-3">
+                            <div class="border-search-voucher d-flex border-radius-small">
+                                <input type="text" matInput placeholder="Masukkan Voucher/Kode Promo" class="search-input full-width">
+                                <button mat-raised-button class="background-pink medium-font-size white-text cursor-pointer">Pakai</button>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body voucher">
+              
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 mt-3">
+                            <h5 class="medium-font-size semi-bold-font-weight">Voucher Untukmu</h5>
+                        </div>
+                        <!-- card-voucher -->
+                        <div class="col-md-12">
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                            <app-card-voucher></app-card-voucher>
+                        </div>
+                        <!-- card-voucher -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="background-pink full-width white-text medium-font-size border-radius-small" mat-raised-button>Tidak</button>
+                <button class="background-pink full-width white-text medium-font-size border-radius-small" mat-raised-button>Ya</button>
+            </div>
+        </div>
+    </div>
+</div>

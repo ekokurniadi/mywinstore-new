@@ -1,1 +1,177 @@
-<p>shop works!</p>
+<section class="shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <app-banner></app-banner>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-2 category-card">
+                <div class="card py-2">
+                    <span class="text-span-title mt-2">Kategori</span>
+                    <hr class="light">
+
+                    <cdk-accordion class="category-items-menu mt-2">
+                        <cdk-accordion-item *ngFor="let item of items; let index = index;" #accordionItem="cdkAccordionItem" role="button" tabindex="0" [attr.id]="'accordion-header-' + index" [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
+                            <div class="category-items-menu-header d-flex justify-content-between" (click)="accordionItem.toggle()">
+                                <span class="medium-font-size">{{ item.title }}</span>
+                                <mat-icon>keyboard_arrow_down</mat-icon>
+                            </div>
+                            <div class="category-items-menu-content" role="region" [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index" [attr.aria-labelledby]="'accordion-header-' + index">
+                                <div class="item-path d-flex cursor-pointer" [routerLink]="['']" *ngFor="let itemData of item.itemDatas">
+                                    <li class="ml-3">
+                                        <span class="medium-font-size normal-font-weight">{{itemData}}</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </cdk-accordion-item>
+                    </cdk-accordion>
+
+                    <span class="text-span-title mt-2 mb-3">Toko</span>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center mb-2">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Official Store</span>
+                    </div>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Reseler</span>
+                    </div>
+                    <hr class="light">
+
+                    <span class="text-span-title mt-2 mb-3">Lokasi</span>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center mb-2">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Jakarta</span>
+                    </div>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Jambi</span>
+                    </div>
+                    <hr class="light">
+
+                    <span class="text-span-title mt-2 mb-3">Brand</span>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center mb-2">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Iphone</span>
+                    </div>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Sony</span>
+                    </div>
+                    <hr class="light">
+
+                    <span class="text-span-title mt-2 mb-3">Warna</span>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center mb-2">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Black</span>
+                    </div>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">BlueSky</span>
+                    </div>
+                    <hr class="light">
+
+                    <span class="text-span-title mt-2 mb-3">Kondisi</span>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center mb-2">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Baru</span>
+                    </div>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">Seken</span>
+                    </div>
+                    <hr class="light">
+
+                    <span class="text-span-title mt-2 mb-3">Pengiriman</span>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center mb-2">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">JNE</span>
+                    </div>
+                    <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                        <input type="checkbox" class="input-checkbox2" name="" id="">
+                        <span class="medium-font-size">JNT</span>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-2 mb-2">
+                        <button mat-raised-button>Lainnya</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-12 mb-2">
+                        <div class="card">
+                            <div class="checklist-filter d-flex ml-2 mt-3">
+                                <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                                    <input type="checkbox" class="input-checkbox" name="" id="">
+                                   <span class="medium-font-size">Official Store</span>
+                                </div>
+                                <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                                    <input type="checkbox" class="input-checkbox" name="" id="">
+                                   <span class="medium-font-size">Popular</span>
+                                </div>
+                                <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                                    <input type="checkbox" class="input-checkbox" name="" id="">
+                                   <span class="medium-font-size">Terbaru</span>
+                                </div>
+                                <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                                    <input type="checkbox" class="input-checkbox" name="" id="">
+                                   <span class="medium-font-size">Terlaris</span>
+                                </div>
+                                <div class="checklist-filter-items d-flex align-content-center justify-content-start align-items-center">
+                                    <input type="checkbox" class="input-checkbox" name="" id="">
+                                   
+                                      <mat-icon class="mt-2">star</mat-icon>
+                                      <span class="medium-font-size">
+                                        4 ke atas
+                                      </span>
+                                    
+                                </div>
+                            </div>
+                            <div class="input-filter-price d-flex">
+                                <div class="input-filter-price-items ml-3 align-self-center">
+                                    <span class="medium-font-size">Harga :</span>
+                                </div>
+                                <div class="input-filter-price-items ml-2">
+                                    <mat-form-field appearance="outline">
+                                        <input type="text" matInput name="p1" id="p1">
+                                    </mat-form-field>
+                                </div>
+                                <div class="input-filter-price-items ml-2">
+                                    <mat-form-field appearance="outline">
+                                        <input type="text" matInput name="p2" id="p2">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                        <div class="card">
+                            <div class="d-flex justify-content-between">
+                                <div class="align-self-center ml-3">
+                                    <span class="medium-font-size">HANDPHONE</span>
+                                </div>
+                                <div class="sort-by-price mr-3" style="padding: 10px !important; width: 200px;">
+                                    <mat-select placeholder="Urutkan Harga" matInput name="sort-by-price-select" id="sort-by-price-select">
+                                        <mat-option value="" selected>Termurah</mat-option>
+                                        <mat-option value="1">1</mat-option>
+                                    </mat-select>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <app-card-product></app-card-product>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

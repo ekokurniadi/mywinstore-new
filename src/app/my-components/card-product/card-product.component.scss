@@ -28,7 +28,7 @@ div.card-product:hover div.card-product-price {
     color: white !important;
 }
 
-div.card-product:hover h5 {
+div.card-product:hover span {
     cursor: pointer;
     background-color: #0080ff;
     color: white !important;
@@ -72,7 +72,7 @@ div.card-product img {
     box-sizing: border-box;
 }
 
-div.card-product-brand h5 {
+div.card-product-brand  {
     font-size: 12px;
     text-align: start;
     margin-top: 10px;
@@ -163,7 +163,7 @@ div.product-rating .mat-icon {
         color: white !important;
         color: white !important;
     }
-    div.card-product:hover h5 {
+    div.card-product:hover span {
         cursor: pointer;
         background-color: #0080ff;
         color: white !important;
@@ -248,7 +248,7 @@ div.product-rating .mat-icon {
         color: white !important;
         color: white !important;
     }
-    div.card-product:hover h5 {
+    div.card-product:hover span {
         cursor: pointer;
         background-color: #0080ff;
         color: white !important;
