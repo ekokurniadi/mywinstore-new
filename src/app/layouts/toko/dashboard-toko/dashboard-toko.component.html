@@ -1,0 +1,8 @@
+<section class="dashboard-toko mt-2">
+    <div class="container">
+        <div class="row">
+            <app-card-info class="col-md-3 full-width p-1" *ngFor="let i of items" [title]="i.title" [total]="i.total">
+            </app-card-info>
+        </div>
+    </div>
+</section>

@@ -13,6 +13,9 @@ const routes: Routes = [
 
   {
     path:'**',pathMatch:'full',loadChildren:()=>import('./public/not-found/not-found.module').then((m)=>m.NotFoundModule)
+  },
+  {
+    path:'toko',loadChildren:()=>import('./layouts/toko/toko.module').then(m=>m.TokoModule)
   }
 ];
 

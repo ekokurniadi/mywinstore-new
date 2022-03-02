@@ -13,6 +13,8 @@ import { DaftarPesananContentComponent } from './daftar-pesanan-content/daftar-p
 import { ModalVoucherComponent } from './modal-voucher/modal-voucher.component';
 import { CardVoucherComponent } from './card-voucher/card-voucher.component';
 import { KeranjangBelanjaCardComponent } from './keranjang-belanja-card/keranjang-belanja-card.component';
+import { HeaderTokoComponent } from './header-toko/header-toko.component';
+import { CardInfoComponent } from './card-info/card-info.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { KeranjangBelanjaCardComponent } from './keranjang-belanja-card/keranjan
     ModalVoucherComponent,
     CardVoucherComponent,
     KeranjangBelanjaCardComponent,
+    HeaderTokoComponent,
+    CardInfoComponent,
   ],
   imports: [CommonModule, SharedModule, RouterModule],
   exports: [
@@ -40,7 +44,9 @@ import { KeranjangBelanjaCardComponent } from './keranjang-belanja-card/keranjan
     DaftarPesananContentComponent,
     ModalVoucherComponent,
     CardVoucherComponent,
-    KeranjangBelanjaCardComponent
+    KeranjangBelanjaCardComponent,
+    HeaderTokoComponent,
+    CardInfoComponent
   ],
 })
-export class MyComponentsModule {}
+export class MyComponentsModule { }

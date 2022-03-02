@@ -1,14 +1,14 @@
 <section class="profile">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="parent-profile-user">
                     <div class="img-wrapper">
                         <div class="profile-circle shadow">
                             <img src="../../../assets/images/banner/1890.jpg">
                             <button class="shadow white-text">
-                            <mat-icon matSuffix>delete_outline</mat-icon>
-                          </button>
+                                <mat-icon matSuffix>delete_outline</mat-icon>
+                            </button>
                         </div>
                     </div>
                     <div class="profile-name ml-auto mr-auto mt-4 text-center">
@@ -17,10 +17,14 @@
                     </div>
                     <div class="profile-menu">
                         <ul class="unstyled-list">
-                            <li (click)="setIndex(i)" *ngFor="let item of menuItems;let i=index" [routerLink]="[item.path]" routerLinkActive="active" [class.active]="selectedIndex===i" class="unstyled-list-item {{item.class}} border-radius-small">
+                            <li (click)="setIndex(i)" *ngFor="let item of menuItems;let i=index"
+                                [routerLink]="[item.path]" routerLinkActive="active" [class.active]="selectedIndex===i"
+                                class="unstyled-list-item {{item.class}} border-radius-small">
                                 <a class="d-flex align-content-center align-items-center">
-                                    <mat-icon class="mr-2 icon white-text" [ngStyle]="{'background-color': item.color}">{{item.icon}}</mat-icon>
-                                    <div class="d-flex align-content-center align-items-center justify-content-between" style="width: 100%">
+                                    <mat-icon class="mr-2 icon white-text" [ngStyle]="{'background-color': item.color}">
+                                        {{item.icon}}</mat-icon>
+                                    <div class="d-flex align-content-center align-items-center justify-content-between"
+                                        style="width: 100%">
                                         <span class="normal-font-size">{{item.title}}</span>
                                     </div>
                                 </a>
@@ -29,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 col-sm-12 col-xs-12 col-lg-9 content">
+            <div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 content">
                 <router-outlet></router-outlet>
             </div>
         </div>

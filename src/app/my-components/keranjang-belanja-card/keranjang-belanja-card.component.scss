@@ -14,13 +14,14 @@ hr.line {
 }
 
 div.image img {
-  width: 188px;
+  width: 144px;
   object-fit: cover;
 }
 
 div.image {
   width: 188px;
   height: auto;
+  margin-bottom: 10px;
 }
 
 div.keranjang-image {
@@ -53,7 +54,7 @@ div.mobile-display {
   display: none;
 }
 
-@media only screen and(max-width:600px) {
+@media only screen and(max-width:768px) {
   div.mobile-display-col {
     display: none;
   }

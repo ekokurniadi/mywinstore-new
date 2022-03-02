@@ -1,20 +1,20 @@
 .input-checkbox2[type="checkbox"] {
-    border: none;
-    content: "";
-    background: #FFF;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+  border: none;
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
-@media only screen and(max-width:600px){
-    section.keranjang-belanja{
-        display: none;
-    }
+@media only screen and(max-width:768px) {
+  section.keranjang-belanja {
+    display: none;
+  }
 }
 
-@media only screen and(min-width:768px) and (max-width:1028px){
-    section.keranjang-belanja{
-        display: none;
-    }
+@media only screen and(min-width:768px) and (max-width: 1028px) {
+  section.keranjang-belanja {
+    display: none;
+  }
 }

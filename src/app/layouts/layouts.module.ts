@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutsComponent } from './layouts.component';
 import { MyComponentsModule } from '../my-components/my-components.module';
-import {RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
@@ -36,16 +36,16 @@ const routes: Routes = [
           import('./shop/shop.module').then((m) => m.ShopModule),
       },
       {
-        path: 'toko',
-        loadChildren: () =>
-          import('./toko/toko.module').then((m) => m.TokoModule),
-      },
-      {
         path: 'user',
         loadChildren: () =>
           import('./user/user.module').then((m) => m.UserModule),
       },
     ],
+  },
+  {
+    path: 'toko',
+    loadChildren: () =>
+      import('./toko/toko.module').then((m) => m.TokoModule),
   },
 ];
 
@@ -53,4 +53,4 @@ const routes: Routes = [
   declarations: [LayoutsComponent],
   imports: [CommonModule, MyComponentsModule, RouterModule.forChild(routes)],
 })
-export class LayoutsModule {}
+export class LayoutsModule { }
