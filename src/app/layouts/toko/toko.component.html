@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-3 bg-white shadow">
-                <div class="profile-menu mt-3">
+                <div class="profile-menu mt-4">
                     <ul class="unstyled-list">
                         <li (click)="setIndex(i)" *ngFor="let item of menuItems;let i=index" [routerLink]="[item.path]"
                             routerLinkActive="active" [class.active]="selectedIndex===i"

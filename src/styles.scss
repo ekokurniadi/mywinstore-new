@@ -1,6 +1,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -15,7 +15,15 @@ $mywinstore-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 $mywinstore-warn: mat.define-palette(mat.$red-palette);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$mywinstore-theme: mat.define-light-theme(( color: ( primary: $mywinstore-primary, accent: $mywinstore-accent, warn: $mywinstore-warn, )));
+$mywinstore-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $mywinstore-primary,
+      accent: $mywinstore-accent,
+      warn: $mywinstore-warn,
+    ),
+  )
+);
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -23,11 +31,10 @@ $mywinstore-theme: mat.define-light-theme(( color: ( primary: $mywinstore-primar
 
 /* You can add global styles to this file, and also import other style files */
 
-$redColor: #FF4051;
-$blueColor: #1877F2;
-$greenColor: #10CD28;
-$fontFamily: 'Montserrat',
-sans-serif;
+$redColor: #ff4051;
+$blueColor: #1877f2;
+$greenColor: #10cd28;
+$fontFamily: "Montserrat", sans-serif;
 //Primary
 $primary: #0080ff;
 $p_light: #69afff;
@@ -37,187 +44,190 @@ $secondary: #3ebffc;
 $s_light: #80f2ff;
 $s_dark: #008fc9;
 //gray
-$g_light:#ECECEC;
-$g_medium:#f9fafc;
-$g_dark:rgba(184, 180, 184, 0.933);
+$g_light: #ececec;
+$g_medium: #f9fafc;
+$g_dark: rgba(184, 180, 184, 0.933);
 //Text
 $textBlack: #000000;
 $textLight: rgba(49, 53, 59, 0.44);
 $textWhite: #ffffff;
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif !important;
-    background-color: $g_medium !important;
+  margin: 0;
+  font-family: "Montserrat", sans-serif !important;
+  background-color: $g_medium !important;
 }
 
 // font style
 .strip-text-style {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .elipsis-text-style {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 // font-size
 .small-font-size {
-    font-size: .75rem !important;
+  font-size: 0.75rem !important;
 }
 
 .normal-font-size {
-    font-size: .8125rem !important;
+  font-size: 0.8125rem !important;
 }
 
 .medium-font-size {
-    font-size: .875rem !important;
+  font-size: 0.875rem !important;
 }
 
 .large-font-size {
-    font-size: 1rem !important;
+  font-size: 1rem !important;
 }
 
 .extra-large-font-size {
-    font-size: 1.125rem !important;
+  font-size: 1.125rem !important;
 }
 
 // font-weight
 .normal-font-weight {
-    font-weight: 300 !important;
+  font-weight: 300 !important;
 }
 
 .medium-font-weight {
-    font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 
 .semi-bold-font-weight {
-    font-weight: 600 !important;
-    
+  font-weight: 600 !important;
 }
 
 .bold-font-weight {
-    font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 
 // no decoration text
 .decoration-none {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 // cursor pointer
 .cursor-pointer {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 // text-color
 .black-text {
-    color: $textBlack !important;
+  color: $textBlack !important;
 }
 
 .light-text {
-    color: $textLight !important;
+  color: $textLight !important;
 }
 
 .white-text {
-    color: $textWhite !important;
+  color: $textWhite !important;
 }
 
 .green-text {
-    color: $greenColor !important;
+  color: $greenColor !important;
 }
 
 .gray-text {
-    color: $g_dark !important;
+  color: $g_dark !important;
 }
 
 .primary-text {
-    color: $p_dark !important;
+  color: $p_dark !important;
 }
 
 // background-color
 .background-white {
-    background-color: $textWhite !important;
+  background-color: $textWhite !important;
 }
 
 .background-black {
-    background-color: $textBlack !important;
+  background-color: $textBlack !important;
 }
 
 .background-pink {
-    background-color: $redColor !important;
+  background-color: $redColor !important;
 }
 
 .background-gray {
-    background-color: $g_dark !important;
+  background-color: $g_dark !important;
 }
 
 .background-primary {
-    background-color: $p_dark !important;
+  background-color: $p_dark !important;
 }
 
 .background-transparent {
-    background-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.background-green {
+  background-color: rgb(81, 210, 157) !important;
 }
 
 // border-radius
 .border-radius-none {
-    border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 .border-radius-reguler {
-    border-radius: 15px !important;
+  border-radius: 15px !important;
 }
 
 .border-radius-small {
-    border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 
 .border-small-bottom-right {
-    border-bottom-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 .border-small-bottom-left {
-    border-bottom-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
 }
 
 .border-none {
-    border: none !important;
+  border: none !important;
 }
 
 // shadow
 .no-shadow {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .shadow {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
 }
 
 main {
-    margin-top: 50px;
-    min-height: 50%;
+  margin-top: 50px;
+  min-height: 50%;
 }
 
 @media only screen and(max-width: 1028px) {
-    main {
-        margin-top: 65px;
-    }
+  main {
+    margin-top: 65px;
+  }
 }
 
 .relative {
-    position: relative !important;
+  position: relative !important;
 }
 
 .full-width {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 button {
-    outline: none;
+  outline: none;
 }

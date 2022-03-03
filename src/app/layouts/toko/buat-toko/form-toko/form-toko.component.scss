@@ -1,0 +1,47 @@
+@import "../../../../../styles.scss";
+section.form-toko {
+  margin-top: 10px;
+}
+
+select {
+  /* remove the original arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+.mat-icon.arrow-icon {
+  position: absolute;
+  pointer-events: none;
+  top: 7px;
+  right: 10px;
+}
+
+select:focus,
+textarea:focus,
+input[type="text"]:focus {
+  border-color: $g_dark;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px $g_dark;
+  outline: 0 none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+textarea,
+select,
+input[type="text"] {
+  border-color: 1px solid $g_dark;
+  outline: 0 none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+select,
+textarea::placeholder,
+input[type="text"]::placeholder {
+  font-size: 0.8125rem;
+}
+
+div.form-group {
+  margin-top: -10px;
+}

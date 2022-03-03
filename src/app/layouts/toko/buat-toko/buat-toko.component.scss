@@ -1,10 +1,9 @@
 @import "../../../../styles.scss";
 div.panel {
-  background-color: $g_light;
+  background-color: $textWhite;
 }
 
 div.panel-profile.panel {
-  background-color: red;
   display: inline-block;
 }
 
@@ -47,6 +46,10 @@ div.pilih-foto {
 div.button-actions {
   display: flex;
   justify-content: space-between;
+}
+
+hr.line {
+  border: 1px solid $g_light;
 }
 
 @media only screen and(max-width:768px) {

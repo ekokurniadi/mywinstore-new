@@ -16,7 +16,7 @@ export class TokoComponent implements OnInit {
     },
     {
       path: 'buat-toko',
-      title: 'Buat Toko',
+      title: 'Toko',
       icon: 'store',
       color: '#0055cb',
       class: '',

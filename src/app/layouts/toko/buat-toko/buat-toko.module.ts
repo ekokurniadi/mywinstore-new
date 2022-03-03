@@ -5,7 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MyComponentsModule } from 'src/app/my-components/my-components.module';
 
-const routes: Routes = [{ path: '', component: BuatTokoComponent }];
+const routes: Routes = [{
+  path: '', component: BuatTokoComponent, children: [
+    {
+      path: 'form-toko', loadChildren: () => import('./form-toko/form-toko.module').then(m => m.FormTokoModule)
+    },
+  ]
+}];
 
 @NgModule({
   declarations: [
