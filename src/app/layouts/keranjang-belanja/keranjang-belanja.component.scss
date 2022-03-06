@@ -1,3 +1,8 @@
+@import "../../../styles.scss";
+.header {
+  font-size: $mediumFont;
+  font-weight: 500;
+}
 .input-checkbox2[type="checkbox"] {
   border: none;
   content: "";
@@ -6,24 +11,33 @@
   height: 20px;
   margin-right: 10px;
 }
-.col-md-2.header {
-  flex: 0 0 10%;
-  max-width: 10%;
-  padding-left: 0;
-  padding-right: 0;
-}
-.col-md-1.header {
-  flex: 0 0 5%;
-  max-width: 5%;
-  padding-left: 0;
-  padding-right: 0;
+
+.keranjang-belanja-footer {
+  font-size: $mediumFont;
 }
 
-.col-md-5.header {
-  flex: 0 0 60%;
-  max-width: 60%;
-  padding-left: 0;
-  padding-right: 0;
+.box {
+  display: flex;
+  padding: 16px 16px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.aksi-box {
+  position: relative;
+}
+.aksi {
+  position: absolute;
+  right: 4px;
+}
+
+.btn-checkout {
+  width: 30%;
+  background-color: $redColor;
+  color: white;
+}
+.keranjang-box {
+  padding: 0px 0px;
 }
 
 @media only screen and(max-width:768px) {

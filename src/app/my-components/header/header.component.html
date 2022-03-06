@@ -145,14 +145,22 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="cursor-pointer" mat-raised-button (click)="closeModal()"
-          style="position: absolute;width: 20px;height: 20px;right: 0px; top:2px;z-index: 999;">
+          style="position: absolute;width: 20px;height: 20px;right: 5px; top:2px;z-index: 999;cursor: pointer;">
           <mat-icon class="large-font-size">close</mat-icon>
         </div>
-        <div class="search-box background-white border-radius-small full-width d-flex align-items-center">
-          <mat-icon matSuffix class="search-suffix-icon light-text ml-1">search</mat-icon>
-          <input type="text" class="search-input full-width" placeholder="Kamu lagi cari apa?">
-          <button (click)="closeModal()" mat-raised-button
-            class="search-button white-text background-primary border-radius-small mr-1 ml-1">Cari</button>
+        <div class="row">
+          <div class="col-md-12">
+            <span class="note">Ayo cari barang incaran mu sekarang</span>
+          </div>
+          <div class="col-md-12 searching-box">
+            <div class="row">
+              <div class="col-md-12">
+                <mat-icon class="search-icon">search</mat-icon>
+                <input type="text" matInput class="search-input" placeholder="Kamu lagi cari apa?">
+                <button class="btn-cari" mat-raised-button color="primary">Cari</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

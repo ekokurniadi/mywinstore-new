@@ -20,9 +20,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 ">
             <div class="product-detail-image mt-3">
-              <div class="product-detail-image-content">
+              <div class="product-detail-image-content" *ngFor="let i of gambar" (click)="preview(i.image)">
                 <div class="preview">
                 </div>
                 <div class="btn-preview text-center">
@@ -31,51 +31,7 @@
                   </div>
                   <span>Lihat</span>
                 </div>
-                <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
-              </div>
-              <div class="product-detail-image-content">
-                <div class="preview">
-                </div>
-                <div class="btn-preview text-center">
-                  <div>
-                    <mat-icon>remove_red_eye</mat-icon>
-                  </div>
-                  <span>Lihat</span>
-                </div>
-                <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
-              </div>
-              <div class="product-detail-image-content">
-                <div class="preview">
-                </div>
-                <div class="btn-preview text-center">
-                  <div>
-                    <mat-icon>remove_red_eye</mat-icon>
-                  </div>
-                  <span>Lihat</span>
-                </div>
-                <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
-              </div>
-              <div class="product-detail-image-content">
-                <div class="preview">
-                </div>
-                <div class="btn-preview text-center">
-                  <div>
-                    <mat-icon>remove_red_eye</mat-icon>
-                  </div>
-                  <span>Lihat</span>
-                </div>
-                <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
-              </div>
-              <div class="product-detail-image-content">
-                <div class="preview">
-                </div>
-                <div class="btn-preview text-center">
-                  <div>
-                    <mat-icon>remove_red_eye</mat-icon>
-                  </div>
-                  <span>Lihat</span>
-                </div>
-                <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
+                <img [src]="i.image" alt="">
               </div>
             </div>
           </div>
@@ -174,13 +130,12 @@
         <div class="row">
           <div class="col-md-6">
             <button class="btn-add-cart" mat-raised-button>
-              <mat-icon matSuffix>add_shopping_cart</mat-icon> Tambah ke
+              <mat-icon matSuffix>add_shopping_cart</mat-icon>
               Keranjang
             </button>
           </div>
           <div class="col-md-6">
-            <button class="btn-buy-now" mat-raised-button>Beli
-              Sekarang</button>
+            <button class="btn-buy-now" mat-raised-button>Beli</button>
           </div>
         </div>
         <hr class="light">
@@ -227,11 +182,15 @@
               </div>
 
               <div class="row mt-2">
-                <div class="col-6">
-                  <button mat-raised-button>Chat Penjual</button>
-                </div>
-                <div class="col-6">
-                  <button mat-raised-button>Lihat Toko</button>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col">
+                      <button mat-raised-button>Chat Penjual</button>
+                    </div>
+                    <div class="col text-right">
+                      <button mat-raised-button>Toko</button>
+                    </div>
+                  </div>
                 </div>
               </div>
               <hr class="light">
@@ -239,10 +198,10 @@
               <div class="row mt-2">
                 <div class="col-md-12 detail-toko">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-6">
                       <span class="desc">Penilaian</span>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-6 text-right">
                       <span>
                         <mat-icon class="normal">star</mat-icon>
                       </span>
@@ -254,10 +213,10 @@
               <div class="row">
                 <div class="col-md-12 detail-toko">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-6">
                       <span class="desc">Produk</span>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-6 text-right">
                       <span class="normal">4124</span>
                     </div>
                   </div>
@@ -266,10 +225,10 @@
               <div class="row">
                 <div class="col-md-12 detail-toko">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-6">
                       <span class="desc">Bergabung</span>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-6 text-right">
                       <span class="normal">17 Bulan lalu</span>
                     </div>
                   </div>
@@ -365,3 +324,24 @@
   </div>
 </section>
 <app-product-rekomendasi></app-product-rekomendasi>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalPreviewImage" tabindex="-1" role="dialog" aria-labelledby="modalPreviewImageLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg relative" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="cursor-pointer" mat-raised-button (click)="closeModal()"
+          style="position: absolute;width: 20px;height: 20px;right: 5px; top:10px;z-index: 999;cursor: pointer;color:white">
+          <mat-icon class="large-font-size">close</mat-icon>
+        </div>
+        <div class="row">
+          <div class="col-md-12 box-preview">
+            <img src="" id="image-preview" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

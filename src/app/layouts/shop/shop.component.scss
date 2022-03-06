@@ -19,6 +19,18 @@
   border-radius: 10px;
 }
 
+.btn-kategori {
+  display: none;
+  border-radius: 10px;
+  background-color: $redColor;
+  color: $textWhite;
+}
+
+.widgets {
+  font-size: 18px;
+  line-height: 21px;
+}
+
 .input-checkbox[type="checkbox"] {
   border: none;
   content: "";
@@ -68,6 +80,14 @@
     overflow-x: scroll;
     white-space: nowrap;
   }
+  .product-wrapper {
+    flex-direction: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .btn-kategori {
+    display: inline-block;
+  }
 }
 
 @media only screen and(max-width:600px) {
@@ -88,5 +108,8 @@
   mat-form-field.mat-form-field {
     width: 120px;
     border: none;
+  }
+  .btn-kategori {
+    display: inline-block;
   }
 }

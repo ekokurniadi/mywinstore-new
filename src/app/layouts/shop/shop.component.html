@@ -1,111 +1,219 @@
 <section class="shop">
-    <app-banner></app-banner>
-    <div class="container">
-        <div class="row mt-3">
-            <div class="col-md-3 shadow category-card">
-                <span class="title mt-2">KATEGORI</span>
-                <hr class="light">
-                <cdk-accordion class="category-items-menu mt-2">
-                    <cdk-accordion-item *ngFor="let item of items; let index = index;" #accordionItem="cdkAccordionItem"
-                        role="button" tabindex="0" [attr.id]="'accordion-header-' + index"
-                        [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
-                        <div class="category-items-menu-header d-flex justify-content-between"
-                            (click)="accordionItem.toggle()">
-                            <span>{{ item.title }}</span>
-                            <mat-icon>keyboard_arrow_down</mat-icon>
-                        </div>
-                        <div class="category-items-menu-content" role="region"
-                            [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index"
-                            [attr.aria-labelledby]="'accordion-header-' + index">
-                            <div class="item-path d-flex cursor-pointer" [routerLink]="['']"
-                                *ngFor="let itemData of item.itemDatas">
-                                <li class="ml-3">
-                                    <span>{{itemData}}</span>
-                                </li>
-                            </div>
-                        </div>
-                    </cdk-accordion-item>
-                </cdk-accordion>
-                <span class="mt-2 mb-3">Toko</span>
-                <div class="checklist-filter-items mb-2">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Official Store</span>
-                </div>
-                <div class="checklist-filter-items">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Reseler</span>
-                </div>
-                <hr class="light">
-                <span class="mt-2 mb-3">Lokasi</span>
-                <div class="checklist-filter-items mb-2">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Jakarta</span>
-                </div>
-                <div class="checklist-filter-items">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Jambi</span>
-                </div>
-                <hr class="light">
-                <span class="mt-2 mb-3">Brand</span>
-                <div class="checklist-filter-items mb-2">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Iphone</span>
-                </div>
-                <div class="checklist-filter-items">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Sony</span>
-                </div>
-                <hr class="light">
-                <span class="mt-2 mb-3">Warna</span>
-                <div class="checklist-filter-items mb-2">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Black</span>
-                </div>
-                <div class="checklist-filter-items">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>BlueSky</span>
-                </div>
-                <hr class="light">
-                <span class="mt-2 mb-3">Kondisi</span>
-                <div class="checklist-filter-items mb-2">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Baru</span>
-                </div>
-                <div class="checklist-filter-items">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>Seken</span>
-                </div>
-                <hr class="light">
-                <span class="mt-2 mb-3">Pengiriman</span>
-                <div class="checklist-filter-items mb-2">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>JNE</span>
-                </div>
-                <div class="checklist-filter-items">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span>JNT</span>
-                </div>
-                <div class="text-center">
-                    <button mat-raised-button>Lainnya</button>
-                </div>
+  <app-banner></app-banner>
+  <div class="container">
+
+    <div class="row mt-3">
+
+      <div class="col-md-3 shadow category-card">
+        <span class="title mt-2">KATEGORI</span>
+        <hr class="light">
+        <cdk-accordion class="category-items-menu mt-2">
+          <cdk-accordion-item *ngFor="let item of items; let index = index;" #accordionItem="cdkAccordionItem"
+            role="button" tabindex="0" [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
+            <div class="category-items-menu-header d-flex justify-content-between" (click)="accordionItem.toggle()">
+              <span>{{ item.title }}</span>
+              <mat-icon>keyboard_arrow_down</mat-icon>
             </div>
-            <div class="col-md-9 product-wrapper">
-                <div class="row">
-                    <div class="col-md-12 card-title shadow">
-                        <span class="title">HANDPHONE</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-6 p-1"
-                                *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
-                                <app-card-product></app-card-product>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="category-items-menu-content" role="region"
+              [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index"
+              [attr.aria-labelledby]="'accordion-header-' + index">
+              <div class="item-path d-flex cursor-pointer" [routerLink]="['']" *ngFor="let itemData of item.itemDatas">
+                <li class="ml-3">
+                  <span>{{itemData}}</span>
+                </li>
+              </div>
             </div>
+          </cdk-accordion-item>
+        </cdk-accordion>
+        <span class="mt-2 mb-3">Toko</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Official Store</span>
         </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Reseler</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Lokasi</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Jakarta</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Jambi</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Brand</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Iphone</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Sony</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Warna</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Black</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>BlueSky</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Kondisi</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Baru</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Seken</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Pengiriman</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>JNE</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>JNT</span>
+        </div>
+        <div class="text-center">
+          <button mat-raised-button>Lainnya</button>
+        </div>
+      </div>
+
+      <div class="col-md-9 col-sm-12 col-xs-12 product-wrapper">
+        <div class="row">
+          <div class="col-md-12 card-title shadow ">
+            <div class="row">
+              <div class="col align-self-center">
+                <span class="title">HANDPHONE</span>
+              </div>
+              <div class="col text-right">
+                <button class="btn-kategori" mat-raised-button (click)="openModal()">
+                  <mat-icon class="widgets">widgets</mat-icon>
+                  <span>Kategori</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-6 p-1" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+                <app-card-product></app-card-product>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalKategori" tabindex="-1" role="dialog" aria-labelledby="modalKategoriLabel"
+  aria-hidden="true">
+  <div class="modal-dialog relative" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="cursor-pointer" mat-raised-button (click)="closeModal()"
+          style="position: absolute;width: 20px;height: 20px;right: 5px; top:2px;z-index: 999;">
+          <mat-icon class="large-font-size">close</mat-icon>
+        </div>
+        <span class="title mt-2">KATEGORI</span>
+        <hr class="light">
+        <cdk-accordion class="category-items-menu mt-2">
+          <cdk-accordion-item *ngFor="let item of items; let index = index;" #accordionItem="cdkAccordionItem"
+            role="button" tabindex="0" [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
+            <div class="category-items-menu-header d-flex justify-content-between" (click)="accordionItem.toggle()">
+              <span>{{ item.title }}</span>
+              <mat-icon>keyboard_arrow_down</mat-icon>
+            </div>
+            <div class="category-items-menu-content" role="region"
+              [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index"
+              [attr.aria-labelledby]="'accordion-header-' + index">
+              <div class="item-path d-flex cursor-pointer" [routerLink]="['']" *ngFor="let itemData of item.itemDatas">
+                <li class="ml-3">
+                  <span>{{itemData}}</span>
+                </li>
+              </div>
+            </div>
+          </cdk-accordion-item>
+        </cdk-accordion>
+        <span class="mt-2 mb-3">Toko</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Official Store</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Reseler</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Lokasi</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Jakarta</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Jambi</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Brand</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Iphone</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Sony</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Warna</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Black</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>BlueSky</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Kondisi</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Baru</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>Seken</span>
+        </div>
+        <hr class="light">
+        <span class="mt-2 mb-3">Pengiriman</span>
+        <div class="checklist-filter-items mb-2">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>JNE</span>
+        </div>
+        <div class="checklist-filter-items">
+          <input type="checkbox" class="input-checkbox2" name="" id="">
+          <span>JNT</span>
+        </div>
+        <div class="text-center">
+          <button mat-raised-button>Lainnya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

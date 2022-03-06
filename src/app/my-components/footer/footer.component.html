@@ -1,95 +1,97 @@
 <section class="sticky-footer shadow">
-    <footer>
-        <div class="container">
-            <div class="row py-4">
-                <div class="col-md-3">
-                    <div class="footer-title">
-                        <h5 class="medium-font-size medium-font-weight">BANTUAN</h5>
-                    </div>
-                    <div class="footer-content">
-                        <ul class="unstyled-list medium-font-size normal-font-weight">
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Pembayaran</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Pengiriman</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Status Pesanan</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Pengembalian Produk</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Hubungi Kami</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-title">
-                        <h5 class="medium-font-size medium-font-weight">CUSTOMER CARE</h5>
-                    </div>
-                    <div class="footer-content">
-                        <ul class="unstyled-list medium-font-size normal-font-weight">
-                            <li class="unstyled-list-item">
-                                <a>Buka 24 jam setiap hari</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']" class="d-flex justify-content-start align-content-center justify-items-center align-items-center">
-                                    <mat-icon matSuffix class="phone-icon">phone</mat-icon>
-                                    0812345678
-                                </a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']" class="d-flex justify-content-start align-content-center justify-items-center align-items-center">
-                                    <mat-icon matSuffix class="mail-icon">mail</mat-icon>
-                                    Online.shop.com
-                                </a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <button mat-raised-button class="btn-butuh-bantuan normal-font-size">Saya butuh bantuan</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-title">
-                        <h5 class="medium-font-size medium-font-weight">INFO ONLINE SHOP</h5>
-                    </div>
-                    <div class="footer-content">
-                        <ul class="unstyled-list medium-font-size normal-font-weight">
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Tentang Online Shop</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Kabar Terbaru</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Daftar Brand</a>
-                            </li>
-                            <li class="unstyled-list-item">
-                                <a [routerLink]="['/']">Karir</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-title">
-                        <h5 class="medium-font-size medium-font-weight">IKUTI KAMI</h5>
-                    </div>
-                    <div class="footer-content">
-                        <ul class="unstyled-list medium-font-size normal-font-weight">
-                            <li class="unstyled-list-item cursor-pointer" style="margin-top: 70px;" [routerLink]="['/']">
-                                <a>
-                                    <h5 class="medium-font-size normal-font-weight">UNDUH APLIKASI KAMI</h5>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <footer>
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-md-3">
+          <div class="footer-title">
+            <span>BANTUAN</span>
+          </div>
+          <div class="footer-content">
+            <ul class="unstyled-list ">
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Pembayaran</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Pengiriman</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Status Pesanan</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Pengembalian Produk</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Hubungi Kami</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </footer>
+        <div class="col-md-3">
+          <div class="footer-title">
+            <span>CUSTOMER CARE</span>
+          </div>
+          <div class="footer-content">
+            <ul class="unstyled-list ">
+              <li class="unstyled-list-item">
+                <a>Buka 24 jam setiap hari</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']"
+                  class="d-flex justify-content-start align-content-center justify-items-center align-items-center">
+                  <mat-icon matSuffix class="phone-icon">phone</mat-icon>
+                  0812345678
+                </a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']"
+                  class="d-flex justify-content-start align-content-center justify-items-center align-items-center">
+                  <mat-icon matSuffix class="mail-icon">mail</mat-icon>
+                  Online.shop.com
+                </a>
+              </li>
+              <li class="unstyled-list-item">
+                <button mat-raised-button class="btn-butuh-bantuan normal-font-size">Saya butuh bantuan</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-title">
+            <span>INFO ONLINE SHOP</span>
+          </div>
+          <div class="footer-content">
+            <ul class="unstyled-list ">
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Tentang Online Shop</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Kabar Terbaru</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Daftar Brand</a>
+              </li>
+              <li class="unstyled-list-item">
+                <a [routerLink]="['/']">Karir</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-title">
+            <span>IKUTI KAMI</span>
+          </div>
+          <div class="footer-content">
+            <ul class="unstyled-list ">
+              <li class="unstyled-list-item" style="margin-top: 70px;" [routerLink]="['/']">
+                <a>
+                  <span class="">UNDUH APLIKASI KAMI</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </section>

@@ -1,86 +1,73 @@
 <section class="keranjang-belanja">
-    <div class="container shadow background-white border-radius-small py-2">
+  <div class="container shadow">
+    <div class="row box">
+      <div class="col-md-12">
         <div class="row">
-            <div class="col-md-5 header d-flex align-items-center py-2 full-width ml-3">
-                <input type="checkbox" name="" class="input-checkbox2" id="">
-                <span class="medium-font-size semi-bold-font-weight">Produk</span>
-            </div>
-            <div class="col-md-2 header d-flex align-items-center py-2 ml-1">
-                <span class="medium-font-size semi-bold-font-weight">Harga Satuan</span>
-            </div>
-            <div class="col-md-2 header d-flex align-items-center py-2 ml-3">
-                <span class="medium-font-size semi-bold-font-weight">Kuantitas</span>
-            </div>
-            <div class="col-md-2 header d-flex align-items-center py-2 ml-1">
-                <span class="medium-font-size semi-bold-font-weight">Total Harga</span>
-            </div>
-            <div class="col-md-1 header d-flex align-items-center py-2 ml-2">
-                <span class="medium-font-size semi-bold-font-weight">Aksi</span>
-            </div>
+          <div class="col-md-7 header">
+            <span>Barang</span>
+          </div>
+          <div class="col-md-1 header">
+            <span>Harga</span>
+          </div>
+          <div class="col-md-2 header text-center">
+            <span>Kuantitas</span>
+          </div>
+          <div class="col-md-1 header">
+            <span>Total</span>
+          </div>
+          <div class="col-md-1 aksi-box text-center">
+            <span class="aksi">Aksi</span>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Barang Keranjang -->
 <section class="keranjang-belanja-items mt-3">
-    <app-keranjang-belanja-card></app-keranjang-belanja-card>
+  <div class="container">
+    <div class="row box mt-2 shadow" *ngFor="let i of [1,2,3,4,5]">
+      <div class="col-md-12 keranjang-box">
+        <app-keranjang-belanja-card></app-keranjang-belanja-card>
+      </div>
+    </div>
+  </div>
+
 </section>
 <!-- End of Barang Keranjang -->
 
 <!-- Footer Keranjang Belanja -->
 <section class="keranjang-belanja-footer mt-3">
-    <div class="container shadow background-white border-radius-small">
-        <div class="row py-2">
-            <div class="col-md-7 mt-3">
-                <div class="voucher d-flex align-content-center justify-content-end">
-                    <mat-icon class="large-font-size primary-text mt-2">receipt</mat-icon>
-                    <span class="medium-font-size align-self-center semi-bold-font-weight">Voucher</span>
-                </div>
-            </div>
-            <div class="col-md-5 d-flex justify-content-end mt-3 mb-3">
-                <div class="d-flex justify-content-end">
-                    <div class="justify-content-end text-right">
-                        <span class="medium-font-size primary-text cursor-pointer"
-                            (click)="openModalVoucher()">Gunakan/Masukkan Kode</span>
-                        <div
-                            class="d-flex align-content-center align-items-center background-primary border-radius-small">
-                            <mat-icon class="white-text ml-2">receipt</mat-icon>
-                            <span class="medium-font-size ml-2 white-text">1 Voucher digunakan</span>
-                            <button mat-raised-button
-                                class="background-transparent no-shadow d-flex align-content-center align-items-center">
-                                <mat-icon class="medium-font-size mt-2 white-text">delete</mat-icon>
-                                <span class="small-font-size white-text">Hapus</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="line">
-            <div class="col-md-7 d-flex align-content-center align-items-center justify-content-between mb-3">
-                <div class="d-flex align-content-center align-items-center">
-                    <input type="checkbox" class="input-checkbox2" name="" id="">
-                    <span class="medium-font-size">Pilih Semua</span>
-                </div>
-                <div class="d-flex align-content-center align-items-center">
-                    <span class="medium-font-size">Potongan Harga</span>
-                </div>
-            </div>
-            <div class="col-md-5 d-flex justify-content-end align-content-center align-items-center mb-3">
-                <span class="medium-font-size">0</span>
-            </div>
-            <hr class="line">
-            <div class="col-md-7 d-flex justify-content-end align-items-center mb-3">
-                <span class="medium-font-size semi-bold-font-weight">Subtotal Produk :</span>
-            </div>
-            <div class="col-md-2 d-flex justify-content-end align-items-center mb-3">
-                <span class="medium-font-size semi-bold-font-weight primary-text">Rp4000.000</span>
-            </div>
-            <div class="col-md-3 d-flex justify-content-between align-items-center mb-3">
-                <button mat-raised-button
-                    class="full-width cursor-pointer background-pink border-radius-small white-text">Checkout</button>
-            </div>
+  <div class="container shadow box">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <div class="row">
+          <div class="col-md-4">
+            <input type="checkbox" class="input-checkbox2" name="" id="">
+            <span class="header">Pilih Semua</span>
+          </div>
+          <div class="col-md-4">
+            <span class="header">Potongan Harga</span>
+          </div>
+          <div class="col-md-4">
+            <span>0</span>
+          </div>
         </div>
+      </div>
+      <hr class="line">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"> <span class="header">Subtotal Produk :</span></div>
+          <div class="col-md-4"> <span class="harga">Rp4000.000</span></div>
+        </div>
+      </div>
+      <div class="col-md-12 mb-3 text-right mt-3">
+        <button mat-raised-button class="btn-checkout">Checkout</button>
+      </div>
     </div>
+  </div>
 </section>
 <!-- End Of Footer Keranjang Belanja -->
 
