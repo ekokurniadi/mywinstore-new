@@ -1,168 +1,160 @@
 <section class="fixed-header">
-    <section class="header-intro background-primary">
-        <div class="container">
-            <div class="row d-flex justify-content-end">
-                <button
-                    class="background-transparent border-none white-text d-flex cursor-pointer align-items-center align-content-center">
-                    <mat-icon class="medium-font-size d-flex align-items-center" matSuffix>help_outline</mat-icon>
-                    <span class="normal-font-size mr-2 d-flex align-items-center">Bantuan</span>
-                </button>
-            </div>
+  <mat-toolbar class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 bantuan">
+          <mat-icon class="help-icon">help_outline</mat-icon>
+          <span class="bantuan-text">Bantuan</span>
         </div>
-    </section>
-    <section class="header-navigation background-primary py-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 d-flex relative">
-                    <div class="navigation-logo d-flex mt-2">
-                        <div [routerLink]="['/beranda']"
-                            class="cursor-pointer large-font-size white-text bold-font-weight mr-3">
-                            MYWINSTORE
-                        </div>
-                    </div>
-                    <div class="navigation-category mr-3 mt-1">
-                        <div class="navigation-category-items">
-                            <button [matMenuTriggerFor]="kategori"
-                                class="background-transparent border-none d-flex justify-content-start align-items-center cursor-pointer">
-                                <mat-icon class="large-font-size white-text  d-flex align-items-center" matSuffix>redeem
-                                </mat-icon>
-                                <span class="white-text normal-font-weight">Kategori</span>
-                            </button>
-                            <mat-menu #kategori="matMenu">
-                                <button mat-menu-item>
-                                    <span>Pakaian</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>Elektronik</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>Lifestyle</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>Makanan</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>Kesehatan</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>Otomotif</span>
-                                </button>
-                            </mat-menu>
-                        </div>
-                    </div>
-                    <div
-                        class="search-box background-white border-radius-small full-width mr-2 d-flex align-items-center">
-                        <mat-icon matSuffix class="search-suffix-icon light-text ml-1">search</mat-icon>
-                        <input type="text" class="search-input full-width" placeholder="Kamu lagi cari apa?">
-                        <button mat-raised-button
-                            class="search-button cursor-pointer white-text background-primary mr-1 ml-1">Cari</button>
+      </div>
+    </div>
+  </mat-toolbar>
+  <mat-toolbar>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 align-self-center">
+          <div class="row">
+            <div class="col-md-6" routerLink="/beranda">
+              <span class="logo">MYWINSTORE</span>
+            </div>
+            <div class="col-md-6 text-center">
+              <span class="kategori" [matMenuTriggerFor]="kategori">Kategori</span>
+            </div>
+            <mat-menu #kategori="matMenu">
+              <button mat-menu-item>
+                <span>Pakaian</span>
+              </button>
+              <button mat-menu-item>
+                <span>Elektronik</span>
+              </button>
+              <button mat-menu-item>
+                <span>Lifestyle</span>
+              </button>
+              <button mat-menu-item>
+                <span>Makanan</span>
+              </button>
+              <button mat-menu-item>
+                <span>Kesehatan</span>
+              </button>
+              <button mat-menu-item>
+                <span>Otomotif</span>
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+        <div class="col-md-6 search-box">
+          <div class="row">
+            <div class="col-md-12">
+              <mat-icon class="search-icon">search</mat-icon>
+              <input type="text" matInput class="search-input" placeholder="Kamu lagi cari apa?">
+              <button class="btn-cari" mat-raised-button color="primary">Cari</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 align-self-center text-center">
+          <div class="row">
+            <div class="col-md-6 notif-cart-wrapper ">
+              <div class="row">
+                <div class="col-md-6 text-center">
+                  <mat-icon class="notif-icon">notifications_none</mat-icon>
+                </div>
+                <div class="col-md-6 text-center" routerLink="/keranjang-belanja">
+                  <mat-icon class="cart-icon">shopping_cart</mat-icon>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 user">
+              <div class="row">
+                <div class="col-md-6" *ngIf="isLoggedin==false">
+                  <button mat-raised-button class="btn-masuk" routerLink="/user">Masuk</button>
+                </div>
+                <div class="col-md-6 align-self-center" *ngIf="isLoggedin==true" routerLink="/user">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="avatar-img">
+                        <img src="./assets/images/product/product-sample-1.jpg" alt="">
+                      </div>
                     </div>
 
-                    <div class="mt-1">
-                        <button class="background-transparent border-none white-text d-flex cursor-pointer">
-                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>notifications_none
-                            </mat-icon>
-                        </button>
-                    </div>
-                    <div class="mt-1">
-                        <button [routerLink]="['keranjang-belanja']"
-                            class="background-transparent border-none white-text d-flex cursor-pointer">
-                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>shopping_cart
-                            </mat-icon>
-                        </button>
-                    </div>
-                    <div>
-                        <button
-                            class="btn-with-outline background-primary white-text no-shadow border-radius-small cursor-pointer"
-                            mat-raised-button>Masuk</button>
-                    </div>
-                    <span class="d-flex cursor-pointer" [routerLink]="['user']">
-                        <div class="user-image">
-                            <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
-                        </div>
-                        <div class="d-flex align-items-center ml-2">
-                            <span class="white-text normal-font-size normal-font-weight">McQueen</span>
-                        </div>
-                    </span>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </mat-toolbar>
 </section>
 
-
-<section class="mobile-navigation background-primary shadow">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 align-items-center full-width mr-2">
-                <div class="navigation-category mt-1 d-flex align-items-center align-content-center mt-3">
-                    <div class="navigation-logo full-width d-flex mt-2">
-                        <div [routerLink]="['/beranda']"
-                            class="logo cursor-pointer large-font-size white-text bold-font-weight mr-3">
-                            MYWINSTORE
-                        </div>
-                    </div>
-
-                    <div class="mt-1">
-                        <button (click)="openModal();"
-                            class="background-transparent border-none white-text cursor-pointer d-flex">
-                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>search</mat-icon>
-                        </button>
-
-                    </div>
-                    <div class="mt-1">
-                        <button class="background-transparent border-none white-text cursor-pointer d-flex relative">
-                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>notifications_none
-                            </mat-icon>
-                            <div
-                                class="shopping_cart_count d-flex justify-content-center align-items-center justify-items-center">
-                                15</div>
-                        </button>
-                    </div>
-                    <div class="mt-1">
-                        <button [routerLink]="['keranjang-belanja']"
-                            class="background-transparent border-none white-text cursor-pointer d-flex relative">
-                            <mat-icon class="large-font-size d-flex align-items-center" matSuffix>shopping_cart
-                            </mat-icon>
-                            <div
-                                class="shopping_cart_count d-flex justify-content-center align-items-center justify-items-center">
-                                15</div>
-                        </button>
-                    </div>
-                    <div class="mt-1 ml-2">
-                        <button class="btn-with-outline background-primary white-text no-shadow border-radius-small"
-                            mat-raised-button>Masuk</button>
-                    </div>
-                    <!-- <div class="user-image">
-                        <img src="../../../assets/images/product/sample-product-6.jpg" alt="">
-                    </div> -->
-
-                </div>
+<section class="mobile-navigation shadow">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 align-items-center">
+        <div class="navigation-category">
+          <div class="navigation-logo">
+            <div [routerLink]="['/beranda']" class="logo mr-3">
+              MYWINSTORE
             </div>
+          </div>
+          <div class="mt-1">
+            <button (click)="openModal();" class="btn-search">
+              <mat-icon matSuffix>search</mat-icon>
+            </button>
+
+          </div>
+          <div class="mt-1">
+            <button class="btn-shopping">
+              <mat-icon matSuffix>notifications_none
+              </mat-icon>
+              <div class="badges">
+                15</div>
+            </button>
+          </div>
+          <div class="mt-1">
+            <button [routerLink]="['keranjang-belanja']" class="btn-keranjang">
+              <mat-icon matSuffix>shopping_cart
+              </mat-icon>
+              <div class="badges">
+                15</div>
+            </button>
+          </div>
+          <div class="ml-2" *ngIf="isLoggedin==false" routerLink="/user">
+            <button class="btn-masuk" mat-raised-button>Masuk</button>
+          </div>
+
+          <div class="avatar-img ml-2" *ngIf="isLoggedin==true" routerLink="/user">
+            <img src="./assets/images/product/product-sample-1.jpg" alt="">
+          </div>
+
+
 
         </div>
+      </div>
+
     </div>
+  </div>
 
 
 </section>
 
 <!-- Modal -->
 <div class="modal fade" id="modalPencarian" tabindex="-1" role="dialog" aria-labelledby="modalPencarianLabel"
-    aria-hidden="true">
-    <div class="modal-dialog relative" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="cursor-pointer" mat-raised-button (click)="closeModal()"
-                    style="position: absolute;width: 20px;height: 20px;right: 0px; top:2px;z-index: 999;">
-                    <mat-icon class="large-font-size">close</mat-icon>
-                </div>
-                <div class="search-box background-white border-radius-small full-width d-flex align-items-center">
-                    <mat-icon matSuffix class="search-suffix-icon light-text ml-1">search</mat-icon>
-                    <input type="text" class="search-input full-width" placeholder="Kamu lagi cari apa?">
-                    <button (click)="closeModal()" mat-raised-button
-                        class="search-button white-text background-primary border-radius-small mr-1 ml-1">Cari</button>
-                </div>
-            </div>
+  aria-hidden="true">
+  <div class="modal-dialog relative" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="cursor-pointer" mat-raised-button (click)="closeModal()"
+          style="position: absolute;width: 20px;height: 20px;right: 0px; top:2px;z-index: 999;">
+          <mat-icon class="large-font-size">close</mat-icon>
         </div>
+        <div class="search-box background-white border-radius-small full-width d-flex align-items-center">
+          <mat-icon matSuffix class="search-suffix-icon light-text ml-1">search</mat-icon>
+          <input type="text" class="search-input full-width" placeholder="Kamu lagi cari apa?">
+          <button (click)="closeModal()" mat-raised-button
+            class="search-button white-text background-primary border-radius-small mr-1 ml-1">Cari</button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

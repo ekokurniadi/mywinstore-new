@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserComponent implements OnInit {
   menuItems = [
     {
-      path: '/user',
+      path: 'profile',
       title: 'Profile',
       icon: 'account_circle',
       color: '#80f2ff',

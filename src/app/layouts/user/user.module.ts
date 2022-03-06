@@ -12,6 +12,16 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        redirectTo: 'profile',
+        pathMatch: 'full',
+      },
+      // {
+      //   path: '',
+      //   loadChildren: () =>
+      //     import('./profile/profile.module').then((m) => m.ProfileModule),
+      // },
+      {
+        path: 'profile',
         loadChildren: () =>
           import('./profile/profile.module').then((m) => m.ProfileModule),
       },
@@ -33,4 +43,4 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ],
 })
-export class UserModule {}
+export class UserModule { }

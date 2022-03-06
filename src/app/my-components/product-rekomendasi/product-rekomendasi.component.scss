@@ -1,0 +1,27 @@
+@import "../../../styles.scss";
+
+section.rekomendasi .container {
+  background-color: $textWhite;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.rekomendasi-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span {
+  font-size: $mediumFont;
+  font-weight: 600;
+}
+
+.rekomendasi-title-others {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $mediumFont;
+  color: $p_dark;
+  cursor: pointer;
+}

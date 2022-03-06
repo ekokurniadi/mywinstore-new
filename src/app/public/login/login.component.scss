@@ -1,65 +1,59 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 img {
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden !important;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden !important;
 }
 
 mat-form-field {
-    display: block;
-    width: calc(100%);
-    height: 50px;
+  display: block;
+  width: calc(100%);
+  height: 50px;
+  border-radius: 10px;
 }
 
-mat-icon {
-    color: $textLight;
+//input outline color
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-radius: 100px !important;
+}
+input[type="password"],
+input[type="text"] {
+  font-size: $mediumFont;
+}
+.btn-masuk {
+  width: 100%;
+  border-radius: 10px;
+  height: 50px;
 }
 
-div.form-login-card {
-    border-radius: 5px;
-    height: 100% !important;
-    overflow: hidden !important;
+.belum-punya-akun {
+  color: $textBlack;
+  font-size: $mediumFont;
 }
 
-h5.medium-gray-text {
-    font-size: 13px;
-    color: $textLight;
-    cursor: pointer;
+.link-daftar {
+  color: $greenColor;
+  font-size: $mediumFont;
+  cursor: pointer;
 }
 
-button.primary-button {
-    height: 50px;
+.lupa-password {
+  cursor: pointer;
+  font-size: $mediumFont;
+  color: $textBlack;
 }
 
-div.divider {
-    width: 100%;
-    border-bottom: 1px solid $textLight;
+.login-box {
+  padding: 0px 30px;
 }
 
-button.facebook-button {
-    width: 100%;
-    height: 50px;
-    font-family: 'Poppins', sans-serif;
-    background-color: $blueColor;
-    color: white;
+.login-title {
+  font-size: $lgFont;
+  font-weight: 600;
 }
 
-button.google-button {
-    width: 100%;
-    height: 50px;
-    font-family: 'Poppins', sans-serif;
-    background-color: $redColor;
-    color: white;
-}
-
-button.apple-button {
-    width: 100%;
-    height: 50px;
-    font-family: 'Poppins', sans-serif;
-    background-color: $textBlack;
-    color: white;
-}
-
-input {
-    color: $textBlack;
+@media only screen and(max-width:768px) {
+  .login-box {
+    padding: 0px 20px;
+  }
 }

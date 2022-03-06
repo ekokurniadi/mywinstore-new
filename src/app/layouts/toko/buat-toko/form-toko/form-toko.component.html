@@ -1,85 +1,71 @@
 <section class="form-toko">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 card border-none border-radius-small shadow py-2">
-                <span class="medium-font-size semi-bold-font-weight mb-4 mt-2">DATA PRIBADI</span>
+            <div class="col-md-12 card shadow py-2">
+                <span class="mb-4 mt-2 label">DATA TOKO</span>
                 <form>
-                    <div class="form-group">
-                        <label class="col-md-12 p-0 medium-font-size">Nama Toko</label>
-                        <div class="col-md-12 p-0">
-                            <input type="text" matInput class="form-control border-radius-small"
-                                placeholder="Nama Toko">
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-between">
-                            <span class="small-font-size gray-text">*Nama toko tidak dapat diubah kembali, pastikan nama
-                                sudah benar</span>
-                            <span class="small-font-size gray-text">0/80 | Min 30 - Max 80 Karakter</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12 p-0 medium-font-size">Alamat</label>
-                        <div class="col-md-12 p-0">
-                            <input type="text" matInput class="form-control border-radius-small" placeholder="Alamat">
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-end">
-                            <span class="small-font-size gray-text">0/150 | Max 150 Karakter</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12 p-0 medium-font-size">Provinsi</label>
-                        <div class="col-md-12 p-0">
-                            <select name="provinsi" id="provinsi" class="form-control border-radius-small">
-                                <option value="">Pilih Provinsi</option>
-                                <option value="Jambi">Jambi</option>
-                            </select>
-                            <mat-icon class="arrow-icon">keyboard_arrow_down</mat-icon>
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-start">
-                            <span class="small-font-size gray-text">*Domisili saat ini</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12 p-0 medium-font-size">Kota</label>
-                        <div class="col-md-12 p-0">
-                            <select name="kota" id="kota" class="form-control border-radius-small">
-                                <option value="">Pilih Kota</option>
-                                <option value="Jambi">Jambi</option>
-                            </select>
-                            <mat-icon class="arrow-icon">keyboard_arrow_down</mat-icon>
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-start">
-                            <span class="small-font-size gray-text">*Domisili saat ini</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12 p-0 medium-font-size">Kode Pos</label>
-                        <div class="col-md-12 p-0">
-                            <input type="text" matInput class="form-control border-radius-small" placeholder="Kode Pos">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12 p-0 medium-font-size">Deskripsi</label>
-                        <div class="col-md-12 p-0">
-                            <textarea name="Deskripsi" matInput placeholder="Deskripsi Toko" id=""
-                                class="form-control border-radius-small" rows="2"></textarea>
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-between">
-                            <span class="small-font-size gray-text">*Min 30 | Max 150 Karakter</span>
-                            <span class="small-font-size gray-text">0/150</span>
-                        </div>
-                    </div>
-                    <div class="form-group mt-2">
-                        <div class="col-md-12 p-0">
-                            <button mat-raised-button
-                                class="background-primary white-text medium-font-size border-small-radius mr-2">Simpan</button>
-                            <button mat-raised-button
-                                class="background-pink white-text medium-font-size border-small-radius mr-2">Cancel</button>
-                        </div>
-                    </div>
+                    <p>
+                        <span class="label">Logo Toko </span><span class="note"> (wajib)</span>
+                    </p>
+                    <p>
+                        <input type="file">
+                    </p>
+
+                    <p>
+                        <span class="label">Nama Toko </span><span class="note"> (Nama toko tidak dapat di ubah
+                            kembali,pastikan nama
+                            sudah benar)</span>
+                        <mat-form-field appearance="outline" hintLabel="* Min 5 | Max 80 Karakter ">
+
+                            <input type="text" #input maxlength="60" minlength="5" placeholder="Nama Toko"
+                                pattern="[0-9A-Za-z ]+" matInput autocomplete="off" formControlName="namaToko">
+                            <mat-hint align="end"> {{input.value?.length || 0}}/60</mat-hint>
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <span class="label">Alamat</span> <span class="note"> (wajib)</span>
+                        <mat-form-field appearance="outline" hintLabel="* Max 120 Karakter">
+
+                            <input type="text" #input2 maxlength="120" placeholder="Alamat Toko" matInput
+                                autocomplete="off" formControlName="alamatToko">
+                            <mat-hint align="end"> {{input2.value?.length || 0}}/120</mat-hint>
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <span class="label">Provinsi</span> <span class="note"> (wajib)</span>
+                        <mat-form-field appearance="outline">
+                            <mat-select placeholder="Hari" matInput name="hari" id="hari">
+                                <mat-option value="Hari" selected>Hari</mat-option>
+                                <mat-option value="1">1</mat-option>
+                            </mat-select>
+
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <span class="label">Kota</span> <span class="note"> (wajib)</span>
+                        <mat-form-field appearance="outline">
+                            <mat-select placeholder="Hari" matInput name="hari" id="hari">
+                                <mat-option value="Hari" selected>Hari</mat-option>
+                                <mat-option value="1">1</mat-option>
+                            </mat-select>
+
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <span class="label">Kode Pos</span> <span class="note"> (wajib)</span>
+                        <mat-form-field appearance="outline">
+
+                            <input type="text" #input2 maxlength="120" placeholder="Kode Pos" matInput
+                                autocomplete="off" formControlName="kodePos">
+                        </mat-form-field>
+                    </p>
+                    <p class="text-left">
+                        <button class="simpan" mat-raised-button type="button">Simpan</button>
+                        <button class="kembali" mat-raised-button type="button" (click)="back()">Kembali</button>
+                    </p>
+
                 </form>
             </div>
-
         </div>
-
     </div>
 </section>

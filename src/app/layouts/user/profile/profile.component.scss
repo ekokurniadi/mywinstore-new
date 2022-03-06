@@ -1,106 +1,97 @@
-@import '../../../../styles.scss';
-div.panel {
-    background-color: $g_light;
+@import "../../../../styles.scss";
+.form-profil {
+  margin-top: 20px;
+  font-size: $mediumFont;
+}
+.card {
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-bottom: 15px;
+  border: none;
 }
 
-div.panel-profile.panel {
-    background-color: red;
-    display: inline-block;
+.mat-form-field {
+  width: 100% !important;
 }
 
-input[type=text] {
-    width: 100%;
-    outline: none;
+.label {
+  font-weight: 500 !important;
 }
 
-input[type=text]::placeholder {
-    font-size: .8125rem;
+.label-large {
+  font-size: $lgFont !important;
+  font-weight: 600 !important;
 }
 
-div.pilih-foto {
-    border-left: 5px solid #f9fafc;
+.note {
+  font-size: 12px !important;
+  color: $textBlack !important;
 }
 
-.form-text {
-    text-align: start;
-    font-size: .8125rem;
-    width: 60px;
-    border: none;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
+.btn-simpan {
+  color: white;
+  border-radius: 10px;
+  background-color: $redColor;
 }
 
-.mat-select {
-    background-color: $textWhite;
-    color: $textBlack;
-    padding-left: 15px;
-    font-family: $fontFamily;
-    font-size: 14px;
-    border: none;
+.img-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
-.mat-label {
-    color: black;
+.profile-circle {
+  width: 100px;
+  height: 100px;
+  background-color: $textWhite;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-div.button-actions {
-    display: flex;
-    justify-content: space-between;
+.profile-circle img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  border: 1px solid $textWhite;
+}
+
+.spacer {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $g_medium;
+}
+.box {
+  padding: 20px;
+}
+
+.left {
+  text-align: center;
+  position: relative;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  outline: none;
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: $mediumFont !important;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: $textWhite;
+  color: $textBlack;
 }
 
 @media only screen and(max-width:768px) {
-    span {
-        font-size: 9px;
-    }
-    label {
-        font-size: 12px !important;
-    }
-    div.button-actions {
-        display: block;
-    }
-    button.btn-pink {
-        margin-bottom: 10px !important;
-    }
-    div.pilih-foto {
-        border-left: none;
-        margin-top: 10px;
-    }
-    div.profile-circle-2 {
-        width: 30px;
-        height: 30px;
-        background-color: $textWhite;
-        border-radius: 50%;
-    }
-    div.profile-circle-2 img {
-        width: 30px;
-        height: 30px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-    span.medium-gray-text-user-mobile {
-        display: none;
-    }
-}
-
-div.profile-circle img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-div.profile-circle-2 {
-    // margin-left: 15px;
-    width: 30px;
-    height: 30px;
-    background-color: $textWhite;
-    border-radius: 50%;
-}
-
-div.profile-circle-2 img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-    border-radius: 50%;
+  .spacer {
+    display: none;
+  }
 }

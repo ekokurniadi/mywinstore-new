@@ -1,132 +1,134 @@
 @import "../../../styles.scss";
-section.banner div.container {
-    background-color: $textWhite;
+section.banner .container {
+  background-color: $textWhite;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-div.single-image {
-    border-radius: 15px;
-    width: 700px;
-    min-width: 700px;
-    height: 350px;
+.single-image {
+  border-radius: 15px;
+  width: 700px;
+  min-width: 700px;
+  height: 350px;
 }
 
-div.single-image img {
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-    border-radius: 15px;
-    width: 700px;
-    height: 350px;
+.single-image img {
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 700px;
+  height: 350px;
 }
 
-div.banner-image-content {
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 15px;
-    padding-bottom: 15px;
+.banner-image-content {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-div.duo-image {
-    width: 100%;
-    height: 350px;
+.duo-image {
+  width: 100%;
+  height: 350px;
 }
 
-div.duo-image div.duo-image-content {
-    height: 165px;
-    width: 100%;
+.duo-image .duo-image-content {
+  height: 165px;
+  width: 100%;
 }
 
-div.duo-image div.duo-image-content img {
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-    border-radius: 15px;
-    height: 100%;
-    width: 100%;
+.duo-image .duo-image-content img {
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and(max-width:600px) {
-    section.banner div.container {
-        background-color: $textWhite;
-        overflow-x: auto;
-        overflow-y: hidden;
-        height: 210px;
-        display: flex;
-        align-content: center;
-        scroll-behavior: smooth;
-    }
-    div.single-image {
-        border-radius: 15px;
-        width: 350px;
-        min-width: 350px;
-        height: 175px;
-    }
-    div.single-image img {
-        background-size: cover;
-        background-position: left;
-        background-repeat: no-repeat;
-        border-radius: 15px;
-        width: 350px;
-        height: 175px;
-    }
-    div.duo-image {
-        display: flex;
-        justify-content: space-between;
-    }
-    div.duo-image div.duo-image-content {
-        height: 165px;
-        width: 100%;
-    }
-    div.duo-image div.duo-image-content img {
-        background-size: cover;
-        background-position: left;
-        background-repeat: no-repeat;
-        border-radius: 15px;
-        height: 175px;
-        width: 350px;
-        margin-right: 15px;
-    }
+  section.banner .container {
+    background-color: $textWhite;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 210px;
+    display: flex;
+    align-content: center;
+    scroll-behavior: smooth;
+  }
+  .single-image {
+    border-radius: 15px;
+    width: 350px;
+    min-width: 350px;
+    height: 175px;
+  }
+  .single-image img {
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 350px;
+    height: 175px;
+  }
+  .duo-image {
+    display: flex;
+    justify-content: space-between;
+  }
+  .duo-image .duo-image-content {
+    height: 165px;
+    width: 100%;
+  }
+  .duo-image .duo-image-content img {
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    height: 175px;
+    width: 350px;
+    margin-right: 15px;
+  }
 }
 
 @media only screen and(min-width:768px) and (max-width: 1024px) {
-    section.banner div.container {
-        background-color: $textWhite;
-        overflow-x: auto;
-        overflow-y: hidden;
-        height: 210px;
-        display: flex;
-        align-content: center;
-        scroll-behavior: smooth;
-    }
-    div.single-image {
-        border-radius: 15px;
-        width: 350px;
-        min-width: 350px;
-        height: 175px;
-    }
-    div.single-image img {
-        background-size: cover;
-        background-position: left;
-        background-repeat: no-repeat;
-        border-radius: 15px;
-        width: 350px;
-        height: 175px;
-    }
-    div.duo-image {
-        display: flex;
-        justify-content: space-between;
-    }
-    div.duo-image div.duo-image-content {
-        height: 165px;
-        width: 100%;
-    }
-    div.duo-image div.duo-image-content img {
-        background-size: cover;
-        background-position: left;
-        background-repeat: no-repeat;
-        border-radius: 15px;
-        height: 175px;
-        width: 350px;
-        margin-right: 15px;
-    }
+  section.banner .container {
+    background-color: $textWhite;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 210px;
+    display: flex;
+    align-content: center;
+    scroll-behavior: smooth;
+  }
+  .single-image {
+    border-radius: 15px;
+    width: 350px;
+    min-width: 350px;
+    height: 175px;
+  }
+  .single-image img {
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 350px;
+    height: 175px;
+  }
+  .duo-image {
+    display: flex;
+    justify-content: space-between;
+  }
+  .duo-image .duo-image-content {
+    height: 165px;
+    width: 100%;
+  }
+  .duo-image .duo-image-content img {
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    height: 175px;
+    width: 350px;
+    margin-right: 15px;
+  }
 }

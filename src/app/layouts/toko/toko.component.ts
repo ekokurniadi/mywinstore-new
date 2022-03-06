@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TokoComponent implements OnInit {
   menuItems = [
     {
-      path: '/toko',
+      path: 'dashboard',
       title: 'Dashboard',
       icon: 'dashboard',
       color: '#80f2ff',
@@ -42,9 +42,5 @@ export class TokoComponent implements OnInit {
   }
 
 
-  selectedIndex: number = 0;
-  setIndex(index: number) {
-    this.selectedIndex = index;
-  }
 
 }

@@ -1,91 +1,70 @@
-<section>
-    <div class="container-fluid">
+<section class="form-profil">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 card shadow">
+        <span class="mb-4 mt-2 label">DATA PRIBADI</span>
+        <form>
+          <p>
+            <span class="label">Nama Lengkap </span><span class="note"> (wajib)</span>
+            <mat-form-field appearance="outline" hintLabel="* Max 80 Karakter ">
+              <input type="text" #input maxlength="80" placeholder="Nama Lengkap" pattern="[0-9A-Za-z ]+" matInput
+                autocomplete="off" formControlName="namaLengkap">
+              <mat-hint align="end"> {{input.value?.length || 0}}/80</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <span class="label">Email Login</span><span class="note"> (wajib)</span>
+            <mat-form-field appearance="outline" hintLabel="* Max 80 Karakter ">
+              <input type="text" #input2 maxlength="60" placeholder="Email Login" matInput autocomplete="off"
+                formControlName="emailLogin">
+              <mat-hint align="end"> {{input2.value?.length || 0}}/80</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <span class="label">Email Notifikasi</span><span class="note"> (wajib)</span>
+            <mat-form-field appearance="outline" hintLabel="* Max 80 Karakter ">
+              <input type="text" #input3 maxlength="60" placeholder="Email Notifikasi" matInput autocomplete="off"
+                formControlName="emailNotifikasi">
+              <mat-hint align="end"> {{input3.value?.length || 0}}/80</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <span class="label">No. Handphone</span><span class="note"> (wajib)</span>
+            <mat-form-field appearance="outline" hintLabel="* Max 12 Karakter ">
+              <input type="text" #input4 maxlength="12" placeholder="No. Handphone" matInput autocomplete="off"
+                formControlName="noHandphone">
+              <mat-hint align="end"> {{input4.value?.length || 0}}/12</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <button mat-raised-button class="btn-simpan">Simpan</button>
+          </p>
+        </form>
+      </div>
+      <div class="col-md-4 card shadow left">
+        <div class="spacer"></div>
         <div class="row">
-            <div class="col-md-8 col-sm-12 col-xs-12 panel border-radius-small">
-                <div class="large-font-size medium-font-weight ml-3 mt-4">Profil</div>
-                <form>
-                    <div class="form-group">
-                        <label class="normal-font-size medium-font-weight col-md-12">Nama Lengkap</label>
-                        <div class="col-md-12 mt-2">
-                            <input type="text" name="nama_lengkap" matInput id="nama_lengkap" class="form-text background-white border-radius-small">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="normal-font-size medium-font-weight col-md-12">Email Login</label>
-                        <div class="col-md-12 mt-2">
-                            <input type="text" name="email" matInput id="email" class="form-text background-white border-radius-small">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="normal-font-size medium-font-weight col-md-12">Email Notifikasi</label>
-                        <div class="col-md-12 mt-2">
-                            <input type="text" name="email" matInput id="email" class="form-text background-white border-radius-small">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="normal-font-size medium-font-weight col-md-12">Email Notifikasi</label>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 mt-2 d-flex justify-content-between">
-                                    <mat-select class="form-control border-radius-small mr-2" placeholder="Hari" matInput name="hari" id="hari">
-                                        <mat-option value="Hari" selected>Hari</mat-option>
-                                        <mat-option value="1">1</mat-option>
-                                    </mat-select>
-                                    <mat-select class="form-control border-radius-small mr-2" placeholder="Bulan" matInput name="bulan" id="bulan">
-                                        <mat-option value="Hari" selected>Hari</mat-option>
-                                        <mat-option value="1">1</mat-option>
-                                    </mat-select>
-                                    <mat-select class="form-control border-radius-small" placeholder="Tahun" matInput name="bulan" id="bulan">
-                                        <mat-option value="Hari" selected>Hari</mat-option>
-                                        <mat-option value="1">1</mat-option>
-                                    </mat-select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="normal-font-size medium-font-weight col-md-12 d-flex justify-content-between">
-                        No Handphone
-                        <span>
-                          Belum verifikasi? <a class="decoration-none primary-text normal-font-size cursor-pointer">Verifikasi Sekarang</a>
-                        </span>
-                      </label>
-                        <div class="col-md-12 mt-2">
-                            <input type="text" name="no_handphone" matInput id="no_handphone" placeholder="Contoh 08123456" class="form-text background-white border-radius-small">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="normal-font-size medium-font-weight col-md-12">Jenis Kelamin</label>
-                        <div class="col-md-5 mt-2 d-flex justify-content-between">
-                            <mat-select class="form-control border-radius-small mr-2" placeholder="Jenis Kelamin" matInput name="hari" id="hari">
-                                <mat-option value="Hari" selected>Hari</mat-option>
-                                <mat-option value="1">1</mat-option>
-                            </mat-select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-10 button-actions">
-                            <button mat-raised-button class="border-radius-small background-pink full-width white-text medium-font-size mr-2 mb-2">Simpan</button>
-                            <button mat-raised-button class="border-radius-small background-gray full-width white-text medium-font-size mb-2">Ubah kata sandi</button>
-                        </div>
-                    </div>
-                </form>
+          <div class="col-md-12 box">
+            <div class="img-wrapper">
+              <div class="profile-circle shadow">
+                <img src="../../../assets/images/banner/1890.jpg">
+              </div>
             </div>
-            <div class="col-md-4 panel pilih-foto border-radius-small">
-                <div class="img-wrapper d-flex justify-content-center">
-                    <div class="profile-circle mt-4">
-                        <img src="../../../assets/images/banner/1890.jpg" class="shadow">
-                    </div>
-                </div>
-                <div class="mt-4 d-flex justify-content-center">
-                    <button mat-raised-button class="border-radius-small btn-default mr-2 normal-font-size background-white no-shadow">Pilih Gambar</button>
-                </div>
-                <div class="profile-name ml-auto mr-auto mt-4 text-center">
-                    <div class="normal-font-size">Ukuran Gambar: Maks 1MB</div>
-                    <div class="normal-font-size mb-3">Format Gambar: PNG, JPEG</div>
-                </div>
-            </div>
+          </div>
+          <div class="col-md-12">
+            <label class="custom-file-upload shadow">
+              <input type="file" />
+              Pilih Gambar
+            </label>
+          </div>
+          <div class="col-md-12">
+            <span>Ukuran Gambar: Maks 1MB</span>
+          </div>
+          <div class="col-md-12">
+            <span>Format Gambar: PNG, JPEG</span>
+          </div>
         </div>
+      </div>
     </div>
-
+  </div>
 </section>

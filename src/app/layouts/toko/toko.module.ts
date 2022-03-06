@@ -9,7 +9,12 @@ const routes: Routes = [
   {
     path: '', component: TokoComponent, children: [
       {
-        path: '', loadChildren: () => import('./dashboard-toko/dashboard-toko.module').then(m => m.DashboardTokoModule)
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard', loadChildren: () => import('./dashboard-toko/dashboard-toko.module').then(m => m.DashboardTokoModule)
       },
       {
         path: 'buat-toko', loadChildren: () => import('./buat-toko/buat-toko.module').then(m => m.BuatTokoModule)

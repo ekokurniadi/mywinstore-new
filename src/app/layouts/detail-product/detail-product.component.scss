@@ -1,297 +1,369 @@
-@import '../../../styles.scss';
-section.detail-product div.container {
-    margin-top: 50px;
-    background-color: $textWhite;
+@import "../../../styles.scss";
+section.detail-product .container {
+  margin-top: 50px;
+  background-color: $textWhite;
+  border-radius: 10px;
 }
 
-.mat-icon {
-    margin-top: 15px;
+.wrapper {
+  position: relative;
 }
 
-div.head {
-    border-bottom: 2px solid $g_light;
+.wrapper span {
+  position: absolute;
+  top: 0px;
 }
 
-div.product-cover-image {
-    width: 100%;
-    height: 400px;
+.wrapper .mat-icon {
+  position: absolute;
+  left: 67px;
 }
 
-div.product-cover-image img {
-    width: 100%;
-    height: 400px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    object-fit: cover;
+.content-item .mat-icon {
+  font-size: 14px;
+  line-height: 20px;
 }
 
-div.product-detail-count-content button {
-    background-color: $g_light;
-    color: $textWhite;
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
+.head {
+  border-bottom: 2px solid $g_light;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: $mediumFont;
 }
 
-div.product-detail-image {
-    width: 100%;
-    height: auto;
-    min-height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    overflow-y: auto;
-    scroll-behavior: smooth;
+.product-name {
+  font-size: 12px !important;
+  font-weight: 600;
 }
 
-div.product-detail-image-content {
-    width: 120px;
-    height: auto;
-    border-radius: 5px;
-    border: 1px solid $textLight;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.product-cover-image {
+  width: 100%;
+  height: 400px;
 }
 
-div.product-detail-image-content img {
-    width: 120px;
-    height: auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 1px solid $textLight;
+.product-cover-image img {
+  width: 100%;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
 }
 
-div.product-detail-image-caption {
-    display: flex;
-    justify-content: space-between;
+.product-detail-count-content button {
+  background-color: $g_light;
+  color: $textWhite;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
 }
 
-div.product-detail-image-caption .mat-icon {
-    color: $p_dark;
-    margin-right: -10px;
-    margin-bottom: -5px !important;
-    align-self: center;
+.product-detail-image {
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
-div.product-detail-image-caption div {
-    margin-top: 5px;
-    white-space: nowrap;
+.product-detail-image-content {
+  position: relative;
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid $textLight;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.product-detail-image-content:hover {
+  .preview {
+    background-color: black;
+    opacity: 0.5;
+  }
+  .btn-preview {
+    display: block;
+    color: white !important;
+    font-size: $mediumFont;
+  }
 }
 
-div.product-detail-price span.price {
-    color: $p_dark;
+.preview {
+  position: absolute;
+  left: 0px;
+  background-color: transparent;
+  width: 119px;
+  height: 91px;
 }
 
-div.product-detail-color span.color-option {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
-    width: 80px;
+.btn-preview {
+  position: absolute;
+  top: 28px;
+  left: 45px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
 }
 
-div.product-detail-color div.color-option-items {
-    background-color: $p_dark;
-    width: 15px;
-    height: 15px;
-    border-radius: 2px;
+.share {
+  display: flex;
+  align-items: center;
+  font-size: $mediumFont;
 }
 
-div.caption-items {
-    display: flex;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
+.product-brand {
+  font-size: $mediumFont;
+  font-weight: 500;
 }
 
-div.product-detail-kirim {
-    white-space: normal;
+.price {
+  font-size: $mediumFont;
+  color: $p_dark;
+  font-weight: 500;
 }
 
-div.product-detail-kirim a {
-    text-decoration: none;
+.link {
+  font-size: $mediumFont;
+  cursor: pointer;
+  color: $p_dark;
 }
 
-div.product-detail-size span.size-option div.size-option-items.active {
-    border: 1px solid $textBlack;
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 25px;
-    margin-left: -3px;
-    vertical-align: middle;
-    text-align: center;
-    border-radius: 2px;
+.mat-form-select {
+  font-size: $mediumFont;
 }
 
-div.product-detail-count-content button.btn-count-decrease {
-    height: 30px;
-    width: 30px !important;
-    border-radius: 6px 0px 0px 6px !important;
-    color: $textBlack;
+.desc {
+  font-size: $mediumFont;
+  font-weight: 500;
 }
 
-div.product-detail-count-content button.btn-count-increase {
-    height: 30px;
-    width: 30px !important;
-    border-radius: 0px 6px 6px 0px !important;
-    color: $textBlack;
+.product-detail-image-content img {
+  width: 120px;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid $textLight;
+}
+
+.product-detail-image-caption {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-detail-image-caption .mat-icon {
+  color: $p_dark;
+  align-self: center;
+  font-size: 12px;
+  line-height: 23px;
+  width: 12px !important;
+  margin-right: 5px;
+}
+
+.product-detail-image-caption {
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.product-detail-price span.price {
+  color: $p_dark;
+  font-size: $mediumFont;
+  font-weight: 500;
+}
+
+.caption-items {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.product-detail-kirim {
+  white-space: normal;
+}
+
+.product-detail-kirim a {
+  text-decoration: none;
+}
+
+.product-detail-count-content button.btn-count-decrease {
+  height: 30px;
+  width: 30px !important;
+  border-radius: 6px 0px 0px 6px !important;
+  color: $textBlack;
+}
+
+.product-detail-count-content button.btn-count-increase {
+  height: 30px;
+  width: 30px !important;
+  border-radius: 0px 6px 6px 0px !important;
+  color: $textBlack;
 }
 
 .set-width {
-    text-align: center;
-    width: 60px;
-    height: 30px !important;
-    border: 1px solid $textLight;
+  text-align: center;
+  width: 60px;
+  height: 30px !important;
+  border: 1px solid $textLight;
 }
 
 button.btn-twitter {
-    width: 25px !important;
-    height: 25px !important;
-    border-radius: 50% !important;
-    padding: 0;
-    border: none;
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50% !important;
+  padding: 0;
+  border: none;
 }
 
 button.btn-twitter img {
-    width: 100% !important;
-    height: auto;
-    object-fit: cover;
+  width: 100% !important;
+  height: auto;
+  object-fit: cover;
 }
 
 button.btn-mail {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    padding: 0 !important;
-    border: none;
-    background-color: transparent;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  border: none;
+  background-color: transparent;
 }
 
 button.btn-mail img {
-    width: 100% !important;
-    height: auto;
-    object-fit: cover;
+  width: 100% !important;
+  height: auto;
+  object-fit: cover;
 }
 
 button.btn-facebook {
-    border-radius: 50% !important;
-    width: 25px !important;
-    height: 25px !important;
-    background-color: $blueColor;
-    border: none;
+  border-radius: 50% !important;
+  width: 25px !important;
+  height: 25px !important;
+  background-color: $blueColor;
+  border: none;
 }
 
-div.profile-toko-card.card {
-    padding: 15px;
+.note {
+  width: 100%;
+  height: auto;
+  position: relative;
+  white-space: normal;
+  padding-top: 50%;
 }
 
-div.profile-toko-action button {
-    border-radius: 0px !important;
-    padding-left: 12px;
-    padding-right: 12px;
+.share button img {
+  border-radius: 50% !important;
+  width: 100% !important;
+  height: auto;
+  object-fit: contain;
 }
 
-div.note {
-    width: 100%;
-    height: auto;
-    position: relative;
-    white-space: normal;
-    padding-top: 50%;
+.wishlist .mat-icon {
+  color: $redColor;
+  font-size: 20px;
+  line-height: 23px;
 }
 
-div.profile-toko-detail span.rating .mat-icon {
-    margin-top: 2px;
+.wishlist {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: $mediumFont;
+}
+.wishlist-box {
+  align-items: center;
 }
 
-div.product-detail-wishlist-share button img {
-    border-radius: 50% !important;
-    width: 100% !important;
-    height: auto;
-    object-fit: contain;
+button.btn-add-cart {
+  background-color: $blueColor;
+  color: white;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
 }
 
-a.btn-add-wishlist .mat-icon {
-    color: $textLight;
-    margin-top: 5px;
-    margin-right: 5px;
+button.btn-buy-now {
+  background-color: $redColor;
+  color: white;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
 }
 
-a.btn-add-wishlist {
-    background-color: transparent;
-    box-shadow: 0 !important;
-    color: $textBlack;
-    margin-right: 15px;
-    cursor: pointer;
+.product-detail-actions .mat-icon {
+  margin-top: 8px;
 }
 
-div.product-detail-actions button.btn-add-cart {
-    background-color: $blueColor;
-    color: white;
-    margin-right: 15px;
-    width: 100%;
-    height: 40px;
+.profile-image {
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
 }
 
-div.product-detail-actions button.btn-buy-now {
-    background-color: $redColor;
-    color: white;
-    width: 100%;
-    height: 40px;
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile-image-box {
+  display: flex;
+  justify-content: center;
 }
 
-div.product-detail-actions .mat-icon {
-    margin-top: 8px;
+.card {
+  padding: 10px 10px;
+  border-radius: 10px !important;
+}
+.last-seen {
+  font-size: 12px !important;
 }
 
-section.spesifikasi-diskusi-ulasan div.container {
-    margin-top: 15px;
-    background-color: $textWhite;
+.detail-toko {
+  padding: 1px 15px;
 }
 
-div.header-with-border {
-    border: 2px solid $g_light;
+.card button {
+  font-size: $mediumFont;
+  border-radius: 10px !important;
+  box-shadow: none;
+  border: 1px solid $g_light;
 }
 
-.detail-description h5 {
-    text-align: end;
+.header {
+  padding: 20px 20px;
+  border: 1px solid $g_light;
+  border-radius: 10px;
+}
+.box {
+  padding: 15px;
 }
 
-div.profile-circle img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
+.normal {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.spesifikasi-diskusi-ulasan .container {
+  background-color: $textWhite;
+  border-radius: 10px;
 }
 
 @media only screen and(max-width:768px) {
-    section.detail-product div.container {
-        margin-top: 50px;
-    }
-    div.product-detail-image-caption p {
-        white-space: nowrap;
-    }
-    div.product-detail-actions {
-        display: block !important;
-        text-align: center;
-    }
-    div.product-detail-actions button.btn-add-cart {
-        background-color: $blueColor;
-        color: white;
-        width: 100%;
-        height: 40px;
-        margin-right: 0px !important;
-        margin-bottom: 15px;
-    }
-    div.product-detail-actions button.btn-buy-now {
-        background-color: $redColor;
-        color: white;
-        width: 100%;
-        height: 40px;
-    }
+  .product-name {
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+  }
+  section.detail-product .container {
+    margin-top: 50px;
+  }
 }

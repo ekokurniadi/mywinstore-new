@@ -1,4 +1,4 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 declare var $: any;
 @HostListener('window:scroll', ['$event'])
 @Component({
@@ -7,16 +7,16 @@ declare var $: any;
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() {}
+  isLoggedin: boolean = true;
+  constructor() { }
   ngOnInit(): void {
 
   }
 
-  openModal(){
+  openModal() {
     $('#modalPencarian').modal('show');
   }
-  closeModal(){
+  closeModal() {
     $('#modalPencarian').modal('hide');
   }
 

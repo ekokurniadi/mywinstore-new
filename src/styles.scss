@@ -51,6 +51,14 @@ $g_dark: rgba(184, 180, 184, 0.933);
 $textBlack: #000000;
 $textLight: rgba(49, 53, 59, 0.44);
 $textWhite: #ffffff;
+
+// font-size
+$smallFont: 0.75rem !important;
+$regulerFont: 0.8125rem !important;
+$mediumFont: 0.875rem !important;
+$lgFont: 1rem !important;
+$xlFont: 0.125rem !important;
+
 html,
 body {
   height: 100%;
@@ -60,144 +68,6 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif !important;
   background-color: $g_medium !important;
-}
-
-// font style
-.strip-text-style {
-  text-decoration: line-through;
-}
-
-.elipsis-text-style {
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-// font-size
-.small-font-size {
-  font-size: 0.75rem !important;
-}
-
-.normal-font-size {
-  font-size: 0.8125rem !important;
-}
-
-.medium-font-size {
-  font-size: 0.875rem !important;
-}
-
-.large-font-size {
-  font-size: 1rem !important;
-}
-
-.extra-large-font-size {
-  font-size: 1.125rem !important;
-}
-
-// font-weight
-.normal-font-weight {
-  font-weight: 300 !important;
-}
-
-.medium-font-weight {
-  font-weight: 500 !important;
-}
-
-.semi-bold-font-weight {
-  font-weight: 600 !important;
-}
-
-.bold-font-weight {
-  font-weight: 700 !important;
-}
-
-// no decoration text
-.decoration-none {
-  text-decoration: none !important;
-}
-
-// cursor pointer
-.cursor-pointer {
-  cursor: pointer !important;
-}
-
-// text-color
-.black-text {
-  color: $textBlack !important;
-}
-
-.light-text {
-  color: $textLight !important;
-}
-
-.white-text {
-  color: $textWhite !important;
-}
-
-.green-text {
-  color: $greenColor !important;
-}
-
-.gray-text {
-  color: $g_dark !important;
-}
-
-.primary-text {
-  color: $p_dark !important;
-}
-
-// background-color
-.background-white {
-  background-color: $textWhite !important;
-}
-
-.background-black {
-  background-color: $textBlack !important;
-}
-
-.background-pink {
-  background-color: $redColor !important;
-}
-
-.background-gray {
-  background-color: $g_dark !important;
-}
-
-.background-primary {
-  background-color: $p_dark !important;
-}
-
-.background-transparent {
-  background-color: transparent !important;
-}
-
-.background-green {
-  background-color: rgb(81, 210, 157) !important;
-}
-
-// border-radius
-.border-radius-none {
-  border-radius: 0 !important;
-}
-
-.border-radius-reguler {
-  border-radius: 15px !important;
-}
-
-.border-radius-small {
-  border-radius: 10px !important;
-}
-
-.border-small-bottom-right {
-  border-bottom-right-radius: 10px !important;
-}
-
-.border-small-bottom-left {
-  border-bottom-left-radius: 10px !important;
-}
-
-.border-none {
-  border: none !important;
 }
 
 // shadow
@@ -214,18 +84,10 @@ main {
   min-height: 50%;
 }
 
-@media only screen and(max-width: 1028px) {
+@media only screen and(min-width:768px) {
   main {
-    margin-top: 65px;
+    margin-top: 120px;
   }
-}
-
-.relative {
-  position: relative !important;
-}
-
-.full-width {
-  width: 100% !important;
 }
 
 button {

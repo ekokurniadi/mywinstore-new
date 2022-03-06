@@ -5,15 +5,13 @@
             <div class="col-3 bg-white shadow">
                 <div class="profile-menu mt-4">
                     <ul class="unstyled-list">
-                        <li (click)="setIndex(i)" *ngFor="let item of menuItems;let i=index" [routerLink]="[item.path]"
-                            routerLinkActive="active" [class.active]="selectedIndex===i"
-                            class="unstyled-list-item {{item.class}} border-radius-small">
+                        <li *ngFor="let item of menuItems;let i=index" [routerLink]="[item.path]"
+                            routerLinkActive="active" class="unstyled-list-item">
                             <a class="d-flex align-content-center align-items-center">
                                 <mat-icon class="mr-2 icon white-text" [ngStyle]="{'background-color': item.color}">
                                     {{item.icon}}</mat-icon>
-                                <div class="d-flex align-content-center align-items-center justify-content-between"
-                                    style="width: 100%">
-                                    <span class="normal-font-size">{{item.title}}</span>
+                                <div>
+                                    <span>{{item.title}}</span>
                                 </div>
                             </a>
                         </li>

@@ -1,47 +1,44 @@
 @import "../../../../../styles.scss";
-section.form-toko {
+
+.form-toko {
   margin-top: 10px;
+  font-size: $mediumFont;
 }
 
-select {
-  /* remove the original arrow */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  position: relative;
+.mat-form-field {
+  width: 100% !important;
 }
 
-.mat-icon.arrow-icon {
-  position: absolute;
-  pointer-events: none;
-  top: 7px;
-  right: 10px;
+.label {
+  font-weight: 500 !important;
 }
 
-select:focus,
-textarea:focus,
-input[type="text"]:focus {
-  border-color: $g_dark;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px $g_dark;
-  outline: 0 none;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-textarea,
-select,
-input[type="text"] {
-  border-color: 1px solid $g_dark;
-  outline: 0 none;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-select,
-textarea::placeholder,
-input[type="text"]::placeholder {
-  font-size: 0.8125rem;
+.label-large {
+  font-size: $lgFont !important;
+  font-weight: 600 !important;
 }
 
-div.form-group {
-  margin-top: -10px;
+.note {
+  font-size: 12px !important;
+  color: $textBlack !important;
+}
+
+.simpan {
+  background-color: $s_dark;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: $mediumFont;
+  padding: 5px 5px;
+  width: 100px;
+  margin-right: 10px;
+}
+.kembali {
+  background-color: $redColor;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: $mediumFont;
+  padding: 5px 5px;
+  width: 100px;
 }

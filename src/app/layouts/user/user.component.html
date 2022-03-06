@@ -1,41 +1,35 @@
 <section class="profile">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="parent-profile-user">
-                    <div class="img-wrapper">
-                        <div class="profile-circle shadow">
-                            <img src="../../../assets/images/banner/1890.jpg">
-                            <button class="shadow white-text">
-                                <mat-icon matSuffix>delete_outline</mat-icon>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="profile-name ml-auto mr-auto mt-4 text-center">
-                        <div class="normal-font-size text-center">User Name</div>
-                        <div class="normal-font-size text-center mb-2">Member</div>
-                    </div>
-                    <div class="profile-menu">
-                        <ul class="unstyled-list">
-                            <li (click)="setIndex(i)" *ngFor="let item of menuItems;let i=index"
-                                [routerLink]="[item.path]" routerLinkActive="active" [class.active]="selectedIndex===i"
-                                class="unstyled-list-item {{item.class}} border-radius-small">
-                                <a class="d-flex align-content-center align-items-center">
-                                    <mat-icon class="mr-2 icon white-text" [ngStyle]="{'background-color': item.color}">
-                                        {{item.icon}}</mat-icon>
-                                    <div class="d-flex align-content-center align-items-center justify-content-between"
-                                        style="width: 100%">
-                                        <span class="normal-font-size">{{item.title}}</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="parent-profile-user">
+          <div class="img-wrapper">
+            <div class="profile-circle shadow">
+              <img src="../../../assets/images/banner/1890.jpg">
+              <button class="shadow text-white">
+                <mat-icon matSuffix>delete_outline</mat-icon>
+              </button>
             </div>
-            <div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 content">
-                <router-outlet></router-outlet>
-            </div>
+          </div>
+          <div class="profile-name mt-4 text-center">
+            <div class="normal text-center">User Name</div>
+            <div class="normal text-center mb-2">Member</div>
+          </div>
+          <div class="profile-menu">
+            <ul class="unstyled-list">
+              <li *ngFor="let item of menuItems;let i=index" [routerLink]="[item.path]" routerLinkActive="active"
+                class="unstyled-list-item">
+                <mat-icon class="mr-2 icon" [ngStyle]="{'background-color': item.color}">
+                  {{item.icon}}</mat-icon>
+                <span class="normal">{{item.title}}</span>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 content">
+        <router-outlet></router-outlet>
+      </div>
     </div>
+  </div>
 </section>

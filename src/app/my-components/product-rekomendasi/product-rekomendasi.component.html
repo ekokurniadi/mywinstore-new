@@ -1,12 +1,12 @@
 <section class="rekomendasi">
-    <div class="container shadow mt-2 background-white border-radius-small">
+    <div class="container shadow mt-2">
         <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12 d-flex justify-content-between align-content-center">
-                <div class=" rekomendasi-title ">
-                    <h5 class="large-font-size medium-font-weight mt-3 ">REKOMENDASI</h5>
+            <div class="col-md-12 col-sm-12 col-xs-12 rekomendasi-wrapper">
+                <div class="rekomendasi-title ">
+                    <span>REKOMENDASI</span>
                 </div>
-                <div class="rekomendasi-title-others d-flex align-content-center align-items-center ">
-                    <div class="see-more-button cursor-pointer primary-text " [routerLink]="[ '/shop'] ">
+                <div class="rekomendasi-title-others">
+                    <div class="see-more-button" [routerLink]="[ '/shop'] ">
                         Lihat Semua
                     </div>
                     <mat-icon matSuffix>keyboard_arrow_right</mat-icon>
@@ -15,4 +15,10 @@
         </div>
     </div>
 </section>
-<app-card-product></app-card-product>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-6 p-1" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+            <app-card-product></app-card-product>
+        </div>
+    </div>
+</div>

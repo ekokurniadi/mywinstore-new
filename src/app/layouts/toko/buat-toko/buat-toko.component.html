@@ -1,15 +1,15 @@
 <section>
-    <div class="container shadow border-radius-small">
+    <div class="container">
         <div class="row">
-            <div
-                class="col-md-12 col-sm-12 col-xs-12 panel border-radius-small py-3 d-flex justify-content-between align-content-center align-items-center">
-                <span class="medium-font-size full-width ml-1">User Name</span>
-                <button mat-raised-button [routerLink]="['form-toko']"
-                    class="border-radius-small shadow background-green white-text medium-font-size">
+            <div class="col-md-12 panel shadow py-3">
+                <span class="user-name ml-1">User Name</span>
+                <button mat-raised-button (click)="buatToko()">
                     <span>Buat Toko</span>
                 </button>
             </div>
         </div>
     </div>
 </section>
-<router-outlet></router-outlet>
+
+
+<app-form-toko *ngIf="page==1" (valueChange)="displayCounter($event)"></app-form-toko>
