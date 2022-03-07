@@ -1,0 +1,97 @@
+<section class="profil-toko">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card shadow">
+          <div class="row">
+            <div class="col-md-6 component1 text-center">
+              <div class="row">
+                <div class="col-md-3 image">
+                  <img src="../../../assets/images/product/product-sample-1.jpg" alt="">
+                </div>
+                <div class="col-md-9 align-self-center text-left">
+                  <div class="row">
+                    <div class="col-md-12 mt-2">
+                      <span class="name">Nama Toko</span>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <span class="respon">Dibalas 1 menit</span>
+                            </div>
+                            <div class="col-md-6 align-items-center text-left">
+                              <mat-icon class="lokasi-icon">location_on</mat-icon>
+                              <span class="lokasi-text">Jakarta Barat</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <button mat-raised-button class="btn-pink">Follow</button>
+                        </div>
+                        <div class="col-md-6">
+                          <button mat-raised-button class="btn-pink">Chat Penjual</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 component2">
+              <div class="row">
+                <div class="col-md-12 mt-2 mb-2">
+                  <span class="nilai">Nilai Kualitas Produk</span>
+                </div>
+                <div class="col-md-12 mt-2 mb-2">
+                  <span class="rating">4.9</span>
+                  <span class="rating-star">
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tab">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card shadow">
+          <div class="row">
+            <div class="col-md-12 box">
+              <div (click)="setIndex(0)">
+                <span [class.active]="index==0" class="opsi">Beranda</span>
+                <div [class.active]="index==0" class="garis mr-5"></div>
+              </div>
+              <div (click)="setIndex(1)">
+                <span [class.active]="index==1" class="opsi">Produk</span>
+                <div [class.active]="index==1" class="garis mr-5"></div>
+              </div>
+              <div (click)="setIndex(2)">
+                <span [class.active]="index==2" class="opsi">Ulasan</span>
+                <div [class.active]="index==2" class="garis mr-5"></div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

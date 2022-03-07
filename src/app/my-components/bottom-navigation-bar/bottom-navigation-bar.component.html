@@ -2,24 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="menu-items d-flex justify-content-between align-content-center relative">
-          <div class="menu-items-content cursor-pointer" (click)="setSelected(0);">
+        <div class="menu-items">
+          <div class="menu-items-content" (click)="setSelected(0);" routerLink="/beranda">
             <div class="svg"
               [ngStyle]="{'background-image': selected == 0 ? 'url(../../../assets/images/category-image/home-fill.svg)' :'url(../../../assets/images/category-image/home-outline.svg)' }">
             </div>
             <div>
-              <span [class.active]="selected===0" routerLinkActive="active" class="menu-title">Home</span>
+              <span routerLinkActive="active" class="menu-title">Home</span>
             </div>
           </div>
-          <div class="menu-items-content cursor-pointer" (click)="setSelected(1);">
+          <div class="menu-items-content" (click)="setSelected(1);" routerLink="/shop">
             <div class="svg"
               [ngStyle]="{'background-image': selected == 1 ? 'url(../../../assets/images/category-image/official-store-fill.svg)' :'url(../../../assets/images/category-image/official-store-outline.svg)' }">
             </div>
             <div>
-              <span [class.active]="selected===1" routerLinkActive="active" class="menu-title">Official Store</span>
+              <span routerLinkActive="active" class="menu-title">Official Store</span>
             </div>
           </div>
-          <div class="menu-items-content cursor-pointer" (click)="setSelected(2);">
+          <div class="menu-items-content" (click)="setSelected(2);" routerLink="/keranjang-belanja">
             <div class="svg"
               [ngStyle]="{'background-image': selected == 2 ? 'url(../../../assets/images/category-image/favourite-fill.svg)' :'url(../../../assets/images/category-image/favourite-outline.svg)' }">
             </div>
@@ -27,7 +27,7 @@
               <span [class.active]="selected===2" routerLinkActive="active" class="menu-title">Wishlist</span>
             </div>
           </div>
-          <div class="menu-items-content cursor-pointer" (click)="setSelected(3);">
+          <div class="menu-items-content" (click)="setSelected(3);" routerLink="/user">
             <div class="svg"
               [ngStyle]="{'background-image': selected == 3 ? 'url(../../../assets/images/category-image/transaksi-fill.svg)' :'url(../../../assets/images/category-image/transaksi-outline.svg)' }">
             </div>

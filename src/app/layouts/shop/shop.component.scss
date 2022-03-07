@@ -67,15 +67,15 @@
 }
 
 @media only screen and(min-width:768px) and(max-width:1024px) {
-  div.category-card {
+  .category-card {
     display: none;
   }
-  div.checklist-filter {
+  .checklist-filter {
     overflow-y: hidden;
     overflow-x: scroll;
     white-space: nowrap;
   }
-  div.input-filter-price {
+  .input-filter-price {
     overflow-y: hidden;
     overflow-x: scroll;
     white-space: nowrap;

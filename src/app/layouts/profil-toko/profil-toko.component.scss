@@ -1,0 +1,122 @@
+@import "../../../styles.scss";
+.card {
+  padding: 20px 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.component2 {
+  border-left: 1px solid $g_light;
+  padding: 5px 20px;
+}
+
+.component1 {
+  padding: 5px 20px;
+}
+
+.image {
+  width: 188px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.btn-pink {
+  padding: 0px 0px;
+  width: 100%;
+  background-color: $redColor;
+  color: white;
+  font-weight: 600 !important;
+  border-radius: 10px;
+  height: 35px !important;
+  font-size: $regulerFont;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: $lgFont;
+  font-weight: 600;
+}
+
+.respon {
+  font-size: $regulerFont;
+  color: $textLight;
+}
+
+.lokasi-icon {
+  font-size: $regulerFont;
+  color: $textLight;
+}
+
+.lokasi-text {
+  font-size: $regulerFont;
+  color: $textLight;
+}
+
+.rating {
+  font-size: 24px !important;
+  position: absolute;
+  top: -15px;
+}
+
+.rating-star {
+  position: absolute;
+  left: 54px;
+  top: -10px;
+  color: rgb(245, 142, 8);
+}
+
+.nilai {
+  font-size: $mediumFont;
+  color: $textLight;
+}
+
+.tab {
+  margin-top: 10px;
+}
+
+.garis.active {
+  content: "";
+  width: 65%;
+  height: 2px;
+  background-color: red;
+  line-height: 0 !important;
+  display: block;
+}
+
+.garis {
+  content: "";
+  width: 8%;
+  height: 2px;
+  line-height: 0 !important;
+  display: block;
+}
+
+.box {
+  display: flex;
+}
+
+.opsi {
+  margin-left: 0.5rem !important;
+  margin-right: 3rem !important;
+  cursor: pointer;
+  font-size: $mediumFont;
+  color: $textLight;
+  font-weight: 600;
+}
+
+.opsi.active {
+  color: $p_dark;
+}
+
+@media only screen and(max-width:768px) {
+  .image {
+    width: 100% !important;
+  }
+}

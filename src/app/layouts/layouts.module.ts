@@ -40,6 +40,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./user/user.module').then((m) => m.UserModule),
       },
+      {
+        path: 'profil-toko',
+        loadChildren: () =>
+          import('./profil-toko/profil-toko.module').then((m) => m.ProfilTokoModule),
+      },
     ],
   },
   {

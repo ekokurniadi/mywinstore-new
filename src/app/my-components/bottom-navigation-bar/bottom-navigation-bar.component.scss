@@ -9,7 +9,7 @@ section.footer-mobile {
   background-color: $textWhite;
 }
 
-div.menu-items-content {
+.menu-items-content {
   width: calc(20%);
   margin-top: 10px;
   padding: 4px 0px;
@@ -24,9 +24,10 @@ div.menu-items-content {
   color: rgba(49, 53, 59, 0.68);
   text-decoration: initial;
   white-space: nowrap;
+  cursor: pointer;
 }
 
-div.menu-items-content div.svg {
+.menu-items-content .svg {
   width: 24px;
   height: 24px;
   margin-bottom: 4px;
@@ -34,11 +35,17 @@ div.menu-items-content div.svg {
   border: none !important;
 }
 
-div.menu-items-content span.active {
+.menu-items-content span.active {
   font-weight: 600;
 }
 
-@media only screen and(min-width:1024px) {
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+@media only screen and(min-width:1028px) {
   section.footer-mobile {
     display: none;
   }
