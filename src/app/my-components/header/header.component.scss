@@ -120,6 +120,9 @@ input[type="text"] {
 .notif-cart-wrapper {
   position: relative;
   align-self: center;
+  display: flex;
+  justify-content: center;
+  top: 5px;
 }
 
 .notif-icon {

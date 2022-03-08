@@ -1,1 +1,199 @@
-<p>checkout works!</p>
+<section class="checkout">
+  <div class="container box shadow">
+    <div class="row">
+      <div class="col-md-12 align-items-center">
+        <mat-icon>location_on</mat-icon>
+        <span class="head">
+          Alamat Pengiriman
+        </span>
+      </div>
+      <hr class="light">
+      <div class="col-md-1 align-items-center">
+        <span>
+          Username
+        </span>
+      </div>
+      <div class="col-md-9">
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro nemo, enim error eum, commodi vitae qui
+          minus, quam corrupti voluptatum aut fuga! Debitis, ratione temporibus corporis voluptates eaque excepturi
+          reiciendis.</span>
+      </div>
+      <div class="col-md-2">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <span>Utama</span>
+          </div>
+          <div class="col-md-6 text-center">
+            <span mat-button class="head link">Ubah</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-2">
+  <div class="container box shadow">
+    <div class="row bold">
+      <div class="col-md-9">
+        <span>Produk Dipesan</span>
+      </div>
+      <div class="col-md-1">
+        <span>Harga</span>
+      </div>
+      <div class="col-md-1 text-center">
+        <span>Qty</span>
+      </div>
+      <div class="col-md-1">
+        <span>Subtotal</span>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-4 ">
+        <div class="row">
+          <div class="col d-flex link">
+            <mat-icon>shop</mat-icon>
+            <span class="small">Username Toko</span>
+          </div>
+          <div class="box-2"></div>
+          <div class="col d-flex link">
+            <mat-icon>chat</mat-icon>
+            <span class="small">Chat Sekarang</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-1 text-center">
+        <div class="image-box">
+          <img src="../../../assets/images/product/sample-product-3.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In nobis dolorum ipsum voluptates ducimus doloremque
+          quo natus exercitationem illum corrupti voluptatem molestiae, eveniet explicabo maiores excepturi numquam quae
+          ipsa adipisci.
+        </span>
+      </div>
+      <div class="col-md-1">
+        <span>2.999.999</span>
+      </div>
+      <div class="col-md-1 bold text-center">
+        <span>1</span>
+      </div>
+      <div class="col-md-1 bold">
+        <span>2.999.999</span>
+      </div>
+    </div>
+    <hr class="light">
+    <div class="row">
+      <div class="col-md-10 text-right">
+        <span class="bold">Opsi Pengiriman :</span>
+        <br>
+        <span>Lorem ipsum dolor sit amet consectetur.</span>
+        <br>
+        <span class="head link">Ubah</span>
+      </div>
+      <div class="col-md-2 text-right align-self-center">
+        <span class="bold">Rp30.000</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ck-footer mt-2">
+  <div class="container box shadow">
+    <div class="row mt-2">
+      <div class="col-md-10 text-right">
+        <span class="bold">Subtotal Produk : </span>
+      </div>
+      <div class="col-md-2 text-right align-self-center">
+        <span class="bold">3.029.999</span>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-10 text-right">
+        <span class="bold">Ongkos Kirim : </span>
+      </div>
+      <div class="col-md-2 text-right align-self-center">
+        <span class="bold">3.029.999</span>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-10 text-right">
+        <span class="bold">Total Pembayaran : </span>
+      </div>
+      <div class="col-md-2 text-right align-self-center">
+        <span class="red bold">3.029.999</span>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-10 text-right">
+        <span class="bold">Metode Pembayaran :</span>
+      </div>
+      <div class="col-md-2 text-right align-self-end">
+        <span class="head bold">MYWINKU</span>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-3 offset-md-9">
+        <button mat-raised-button class="konfirmasi">Bayar Sekarang</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="ekspedisiModal" tabindex="-1" role="dialog" aria-labelledby="ekspedisiModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p>
+          <span class="head">Pilih Opsi Pengiriman</span>
+        </p>
+      </div>
+      <div class="modal-body">
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+        <p>
+          <input type="radio" name="opt" id="opt" matInput>
+          <label><span class="ml-2">JNE - Reguler 1-3 Hari (Rp. 30.000)</span></label>
+        </p>
+
+      </div>
+      <div class="modal-footer">
+        <p>
+          <button class="konfirmasi" (click)="closeModal()" mat-raised-button>Konfirmasi</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
