@@ -53,13 +53,21 @@
         </div>
         <div class="col-md-3 align-self-center text-center">
           <div class="row">
-            <div class="col-md-6 notif-cart-wrapper ">
+            <div class="col-md-6 notif-cart-wrapper">
               <div class="row">
                 <div class="col-md-6 text-center">
                   <mat-icon class="notif-icon">notifications_none</mat-icon>
+                  <div class="box-badges">
+                    <div class="badges">
+                    </div>
+                  </div>
                 </div>
                 <div class="col-md-6 text-center" routerLink="/keranjang-belanja">
                   <mat-icon class="cart-icon">shopping_cart</mat-icon>
+                  <div class="box-badges">
+                    <div class="badges">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -107,16 +115,20 @@
             <button class="btn-shopping">
               <mat-icon matSuffix>notifications_none
               </mat-icon>
-              <div class="badges">
-                15</div>
+              <div class="box-badges">
+                <div class="badges">
+                </div>
+              </div>
             </button>
           </div>
           <div class="mt-1">
             <button [routerLink]="['keranjang-belanja']" class="btn-keranjang">
               <mat-icon matSuffix>shopping_cart
               </mat-icon>
-              <div class="badges">
-                15</div>
+              <div class="box-badges">
+                <div class="badges">
+                </div>
+              </div>
             </button>
           </div>
           <div class="ml-2" *ngIf="isLoggedin==false" routerLink="/user">

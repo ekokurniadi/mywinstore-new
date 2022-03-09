@@ -171,14 +171,22 @@ input[type="text"] {
   color: $textWhite;
 }
 
+.box-badges {
+  position: relative;
+  width: 30px;
+  bottom: 30px;
+}
+
 .badges {
   position: absolute;
-  top: -10px;
   background-color: red;
   border-radius: 50%;
   padding: 0px 3px;
   font-size: 10px;
+  top: -8px;
   left: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .btn-shopping {
@@ -222,6 +230,10 @@ section.mobile-navigation {
 @media only screen and(max-width:768px) {
   section.fixed-header {
     display: none;
+  }
+
+  .badges {
+    top: 0px;
   }
 }
 

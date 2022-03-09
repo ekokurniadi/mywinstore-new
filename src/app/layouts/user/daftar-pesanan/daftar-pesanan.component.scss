@@ -1,69 +1,76 @@
-@import '../../../../styles.scss';
-section.daftar-pesanan div.container {
-    margin-top: 10px;
-    background-color: white;
-    padding-top: 10px;
+@import "../../../../styles.scss";
+section.daftar-pesanan .container {
+  margin-top: 10px;
+  background-color: white;
+  padding-top: 10px;
 }
 
-div.daftar-pesanan-header {
-    min-width: 100px;
-    text-align: center;
-    white-space: normal;
+.box {
+  border-radius: 10px;
 }
 
-div.daftar-pesanan-header.active {
-    border-bottom: 3px solid $redColor;
+.daftar-pesanan-header {
+  min-width: 100px;
+  text-align: center;
+  white-space: normal;
+  cursor: pointer;
 }
 
-div.wrapper {
-    overflow: auto;
-    padding-bottom: 5px;
+.daftar-pesanan-header.active {
+  border-bottom: 3px solid $redColor;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  padding-bottom: 5px;
 }
 
 @media only screen and(max-width:600px) {
-    section.daftar-pesanan div.container {
-        margin-top: 10px;
-        background-color: white;
-        padding-top: 10px;
-        box-shadow: none !important;
-    }
-    div.daftar-pesanan-header {
-        min-width: 95px;
-        text-align: center;
-        white-space: normal;
-        background-color: $g_medium;
-        border-radius: 10px;
-        margin-right: 5px;
-        vertical-align: middle;
-        padding-top: 5px;
-        border: 1px solid $g_dark;
-    }
-    div.daftar-pesanan-header.active {
-        background-color: $redColor;
-        border: 2px solid $redColor;
-        color: $textWhite;
-        font-weight: 500;
-    }
+  section.daftar-pesanan .container {
+    margin-top: 10px;
+    background-color: white;
+    padding-top: 10px;
+    box-shadow: none !important;
+  }
+  .daftar-pesanan-header {
+    min-width: 95px;
+    text-align: center;
+    white-space: normal;
+    background-color: $g_medium;
+    border-radius: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+    padding-top: 5px;
+    border: 1px solid $g_dark;
+  }
+  .daftar-pesanan-header.active {
+    background-color: $redColor;
+    border: 2px solid $redColor;
+    color: $textWhite;
+    font-weight: 500;
+  }
 }
 
-@media only screen and(min-width:768px) and (max-width:1028px) {
-    section.daftar-pesanan div.container {
-        margin-top: 10px;
-        background-color: $textWhite;
-        padding-top: 10px;
-        box-shadow: none !important;
-    }
-    div.daftar-pesanan-header {
-        min-width: 95px;
-        text-align: center;
-        white-space: normal;
-        margin-right: 10px;
-        vertical-align: middle;
-        padding-top: 5px;
-        font-weight: normal;
-    }
-    div.daftar-pesanan-header.active {
-        border-bottom: 3px solid $redColor;
-        font-weight: 500;
-    }
+@media only screen and(min-width:768px) and (max-width: 1028px) {
+  section.daftar-pesanan .container {
+    margin-top: 10px;
+    background-color: $textWhite;
+    padding-top: 10px;
+    box-shadow: none !important;
+  }
+  .daftar-pesanan-header {
+    min-width: 95px;
+    text-align: center;
+    white-space: normal;
+    margin-right: 10px;
+    vertical-align: middle;
+    padding-top: 5px;
+    font-weight: normal;
+  }
+  .daftar-pesanan-header.active {
+    border-bottom: 3px solid $redColor;
+    font-weight: 500;
+  }
 }

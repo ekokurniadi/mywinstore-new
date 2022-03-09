@@ -1,18 +1,19 @@
 <section class="daftar-pesanan">
-    <div class="container border-radius-small shadow">
-        <div class="row">
-            <div class="col-md-12 d-flex justify-content-between mr-2 wrapper">
-                <div (click)="setIndex(i)" *ngFor="let menuItem of menuItems;let i=index" routerLinkActive="active" [class.active]="selectedIndex===i" class="{{menuItem.class}} daftar-pesanan-header mb-1">
-                    <div class="normal-font-size normal-font-weight cursor-pointer">
-                        {{menuItem.title}}
-                        <div [class.active]="selectedIndex===i" class="{{menuItem.class}} tab-a mb-2"></div>
-                    </div>
-                </div>
-            </div>
+  <div class="container box shadow">
+    <div class="row">
+      <div class="col-md-12 wrapper">
+        <div (click)="setIndex(i)" *ngFor="let menuItem of menuItems;let i=index" routerLinkActive="active"
+          [class.active]="selectedIndex===i" class="{{menuItem.class}} daftar-pesanan-header mb-1">
+          <div>
+            {{menuItem.title}}
+            <div [class.active]="selectedIndex===i" class="{{menuItem.class}} tab-a mb-2"></div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 <section *ngIf="selectedIndex===0" class="daftar-pesanan">
-    <app-daftar-pesanan-content></app-daftar-pesanan-content>
-    <app-daftar-pesanan-content></app-daftar-pesanan-content>
+  <app-daftar-pesanan-content></app-daftar-pesanan-content>
+  <app-daftar-pesanan-content></app-daftar-pesanan-content>
 </section>

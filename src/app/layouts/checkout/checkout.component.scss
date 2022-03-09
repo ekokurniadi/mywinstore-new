@@ -10,6 +10,7 @@
 
 span {
   font-size: $mediumFont;
+  white-space: wrap !important;
 }
 
 .link {
@@ -23,7 +24,7 @@ span {
 }
 
 .small {
-  font-size: $smallFont;
+  font-size: $mediumFont;
 }
 
 .mat-icon {
@@ -31,11 +32,10 @@ span {
   color: $p_dark;
   width: 18px !important;
   font-size: 0.875rem !important;
-  line-height: 18px;
+  line-height: 22px;
 }
 
 .red {
-  font-size: $lgFont;
   color: $redColor;
   font-weight: 500;
 }
@@ -58,7 +58,7 @@ span {
   position: absolute;
   top: -1px;
   height: 20px;
-  right: 55%;
+  right: 56%;
 }
 
 .light {
@@ -78,9 +78,61 @@ span {
   height: 100%;
   object-fit: contain;
 }
+.l {
+  text-align: left !important;
+}
+.c {
+  text-align: center !important;
+}
+.r {
+  text-align: right !important;
+}
 
-@media only screen and(max-width:1028px) {
-  * {
+@media only screen and(max-width:768px) {
+  .header {
+    display: none;
+  }
+  span {
+    text-align: right !important;
+  }
+
+  .or {
+    text-align: left !important;
+  }
+
+  .l {
+    text-align: right !important;
+  }
+  .c {
+    text-align: right !important;
+  }
+  .r {
+    text-align: right !important;
+  }
+}
+
+@media only screen and(min-width:768px) and (max-width: 1028px) {
+  .mobile {
+    display: none;
+  }
+  span {
+    text-align: right !important;
+  }
+
+  .or {
+    text-align: left !important;
+  }
+}
+
+@media only screen and(min-width:1028px) {
+  .mobile {
+    display: none;
+  }
+  span {
+    text-align: right !important;
+  }
+
+  .or {
     text-align: left !important;
   }
 }

@@ -7,11 +7,10 @@ declare interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
   { title: 'Semua', class: '' },
-  { title: 'Belum Bayar', class: '' },
   { title: 'Dikemas', class: '' },
   { title: 'Dikirim', class: '' },
   { title: 'Dibatalkan', class: '' },
-  { title: 'Diterima', class: '' },
+  { title: 'Selesai', class: '' },
 ];
 @Component({
   selector: 'app-daftar-pesanan',
