@@ -1,0 +1,102 @@
+<mat-dialog-content>
+
+  <div class="row mb-3">
+    <div class="col-md-12 header">
+      <span class="label mb-3">
+        Tambah Alamat Baru
+      </span>
+      <div (click)="closePopup()">
+        <mat-icon>close</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    <span class="label">Nama Penerima</span>
+    <mat-form-field appearance="outline">
+      <input type="text" #input1 placeholder="Nama Penerima" matInput autocomplete="off" formControlName="namaPenerima">
+    </mat-form-field>
+  </p>
+  <p>
+    <span class="label">No Telepon</span>
+    <mat-form-field appearance="outline">
+      <input type="text" #input2 placeholder="No Telepon" matInput autocomplete="off" formControlName="noTelepon">
+    </mat-form-field>
+  </p>
+  <p>
+    <span class="label">Alamat</span>
+    <mat-form-field appearance="outline">
+      <textarea #input3 matInput placeholder="Contoh: isi dengan nama jalan, rt, rw, no.rumah, no komplek, no gedung"
+        formControlName="alamat"></textarea>
+    </mat-form-field>
+  </p>
+  <p>
+    <span class="label">Provinsi</span>
+    <mat-form-field appearance="outline">
+      <input type="text" #input4 placeholder="Provinsi" matInput autocomplete="off" formControlName="provinsi">
+    </mat-form-field>
+  </p>
+  <p>
+    <span class="label">Kota</span>
+    <mat-form-field appearance="outline">
+      <input type="text" #input5 placeholder="Kota" matInput autocomplete="off" formControlName="kota">
+    </mat-form-field>
+  </p>
+  <p>
+    <span class="label">Kecamatan</span>
+    <mat-form-field appearance="outline">
+      <input type="text" #input6 placeholder="Kecamatan" matInput autocomplete="off" formControlName="kota">
+    </mat-form-field>
+  </p>
+  <p>
+    <span class="label">Kode Pos</span>
+    <mat-form-field appearance="outline">
+      <input type="text" #input7 placeholder="Kode Pos" matInput autocomplete="off" formControlName="kodePos">
+    </mat-form-field>
+  </p>
+  <p class="ck">
+    <input type="checkbox" class="input-checkbox"><span class="utama">Jadikan Alamat Utama</span>
+  </p>
+  <p>
+    <span class="mr-2">
+      <button mat-raised-button class="batal">Batal</button>
+    </span>
+    <span>
+      <button mat-raised-button class="simpan">Simpan</button>
+    </span>
+  </p>
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="page==1">
+  <div class="row mb-3">
+    <div class="col-md-12 header">
+      <span class="label mb-3">
+        Tambah Alamat Baru
+      </span>
+      <div (click)="closePopup()">
+        <mat-icon>close</mat-icon>
+      </div>
+    </div>
+  </div>
+  <p class="ck">
+    <input type="checkbox" class="input-checkbox"> <span class="label">UserName / 08123456</span>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <textarea #input3 matInput readonly
+        placeholder="Contoh: isi dengan nama jalan, rt, rw, no.rumah, no komplek, no gedung"
+        formControlName="alamat"></textarea>
+    </mat-form-field>
+  </p>
+  <p class="ck">
+    <input type="checkbox" class="input-checkbox"><span class="utama">Jadikan Alamat Utama</span>
+  </p>
+  <p>
+    <span class="mr-2">
+      <button mat-raised-button class="batal">Batal</button>
+    </span>
+    <span>
+      <button mat-raised-button class="simpan">Simpan</button>
+    </span>
+  </p>
+</mat-dialog-content>

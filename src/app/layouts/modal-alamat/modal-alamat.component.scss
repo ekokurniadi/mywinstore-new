@@ -1,0 +1,52 @@
+@import "../../../styles.scss";
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-icon {
+  cursor: pointer;
+}
+
+.label {
+  font-size: $mediumFont !important;
+  font-weight: 500 !important;
+}
+
+textarea,
+input::placeholder {
+  font-size: $mediumFont;
+}
+
+.ck {
+  display: flex;
+  align-items: center;
+}
+
+.utama {
+  font-size: $mediumFont;
+  color: $g_dark;
+}
+
+.input-checkbox[type="checkbox"] {
+  border: none;
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.simpan {
+  background-color: $redColor;
+  color: white;
+}
+
+.batal {
+  background-color: $g_dark;
+  font-weight: 500;
+}

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LayoutsComponent } from './layouts.component';
 import { MyComponentsModule } from '../my-components/my-components.module';
 import { RouterModule, Routes } from '@angular/router';
+import { ModalAlamatComponent } from './modal-alamat/modal-alamat.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 const routes: Routes = [
@@ -56,6 +58,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [LayoutsComponent],
-  imports: [CommonModule, MyComponentsModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, SharedModule, MyComponentsModule, RouterModule.forChild(routes)],
 })
 export class LayoutsModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalAlamatComponent } from '../modal-alamat/modal-alamat.component';
 declare var $: any;
 @Component({
   selector: 'app-detail-product',
@@ -25,7 +27,8 @@ export class DetailProductComponent implements OnInit {
       'image': '../../../assets/images/product/sample-product-6.jpg',
     },
   ];
-  constructor() { }
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -41,4 +44,13 @@ export class DetailProductComponent implements OnInit {
     $('#image-preview').attr("src", "");
   }
 
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalAlamatComponent, {
+      panelClass: 'icon-outside-modal',
+      width: '100%',
+    })
+  }
+
 }
+
+
